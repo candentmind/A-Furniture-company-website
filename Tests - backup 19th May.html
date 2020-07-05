@@ -1,0 +1,403 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experimentation!</title>
+  
+  <style>
+    :root{
+      box-sizing: border-box;
+      font-size: calc(1vw + 0.63em);
+      --brand-color-1: #29258c;
+    }
+    
+    *, *::before, *::after{
+      box-sizing: inherit;
+    }
+    
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+    }
+    
+
+  /************* HEADER SECTION *******************/
+  /** Full Page Background **/
+  .page-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    background-image: url('pic9.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .page-bg:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    //background-color: rgba(153, 179, 255, 0.1);
+    //background-color: rgba(255, 153, 51, 0.5);
+    background-color: rgba(102, 102, 255, 0.55);
+  }
+  .page-bg:after{
+  /**
+    content: ' ';
+    position: absolute;
+    top: 20%;
+    bottom: 10%; 
+    left: 5%; 
+    right: 5%;
+    border: solid 2px rgba(20, 30, 200, 1);
+    **/
+  }
+
+  .masthead{
+    background-color: var(--brand-color-1);
+    //padding: 0.5em 0;
+    border-bottom: 2px solid var(--brand-color-1);
+    border-top: 2px solid var(--brand-color-1);
+    position: relative;
+    z-index: 101;
+    box-shadow: 0px 3px 3px darkblue;
+    height: 78px;
+  }
+	.masthead > .inner-wrapper{
+		width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    //position: relative;
+    margin: 14px auto;
+    height: 50px;
+	}
+  .logo-wrapper{
+    position: absolute;
+    top: 0; 
+    left: 35%;
+    right: 35%;
+    top: -4px;
+   }
+  .firm-logo{
+    border-radius: 50%;
+    border: solid var(--brand-color-1) 1px;
+    max-width: 100%;
+    height: 90px;
+    width: 90px;
+    display: block;
+    margin: 0 auto;
+    border: solid var(--brand-color-1) 2px;
+  }
+  .toggle-button{
+    margin-left: auto;
+    order: 1;
+    font-weight: bold;
+    padding: 0.89rem 0;
+    border:none;
+    display:inline-block;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    -webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+    padding: 16px;
+    padding-right: 8px;
+  } 
+  .toggle-button:active{
+    transform: scale(0.96);
+  }
+  .toggle-button:nth-of-type(2)::after{
+    content: " ";
+    border-bottom: 3px solid orange;
+    position: absolute;
+  }
+  .toggle-button-top{
+    
+  }
+  .bars{
+    width: 28px;
+    height: 0.22rem;
+    background-color: white;
+    margin-top: 4px;
+    border-radius: 25%;
+    transition: 0.4s;
+    height: 4px;
+  }
+  .bars:nth-of-type(1){
+    margin-top: 0;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 4px);
+    transform: rotate(-45deg) translate(-8px, 4px);
+  }
+  .change .bar2 {opacity: 0;}
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-7px, -4px);
+  }
+  
+  /************* NAVIGATION LIST ********************/
+  .nav-list{
+    position: absolute;
+    right: -0.6rem;
+    top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    background-color: var(--brand-color-1);
+    top: 76px;
+    right: 5%;
+  }
+  .extremes{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+  }
+  .extremes li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 1em 1.8em;
+  }
+  .extremes .active{
+    background-color: #ec252c;
+  }
+  
+  /**************************************** POSSIBLY REDUNDANT CODES, COULD BE USED LATER THOUGH *****************************/
+  /** &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+                        .main-site-nav{
+                          //display: inline-block;
+                          list-style: none;
+                          padding: 0;
+                          margin: 0;
+                          display: flex;
+                          justify-content: center;
+                          width: 100%;
+                          text-align: center;
+                          flex-direction: column;
+                          align-content: center;
+                          align-items: center;
+                        }
+                        
+                        .menu-button{
+                          padding: 1em 0.8em;
+                          font-size: inherit;
+                          //display: none;
+                        }
+                        
+                        .main-site-nav a{
+                          text-decoration: none;
+                          //text-align: center;
+                          color: darkblue;
+                          font-weight: bold;
+                          display: inline-block;
+                          //background-color: lightblue;
+                          padding: 1em 0.8em;
+                        }
+                        
+                        .main-site-nav > li{
+                          display: inline-block;
+                          flex: 1;
+                          //margin-left: 3.5em;
+                        }
+                        
+                        li:first-child a{
+                          //color: green;
+                        }
+                        
+                        
+                        
+                        .services{
+                          //margin-left: auto;
+                        }
+                        
+                        .left{
+                          float: left;
+                        } 
+                        .right{
+                          float: right;
+                        }
+                        
+                        a.active:active{
+                          //color: white;
+                          //background-color: green;
+                        }
+                        a:active{
+                          
+                        }
+                        
+                        .mobile-overlay{
+                          position: fixed;
+                          //left: 0;
+                          //top: 0;
+                          
+                          height: 100vh;
+                          width: 100vw;
+                          background-color: lightblue;
+                        }                                     
+   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  */
+  /************* END NAVIGATION LIST *******************/
+    
+    
+  /************* RESPONSIVE SECTION *******************/
+    
+    @media (max-width: 300px){
+      .nav-wrapper{
+        position: absolute
+      }
+    }
+    
+    .container{
+      //width: 100vw;
+      //height: 100vh;
+	
+      background-color: pink;
+      position: absolute;
+      top: 4.9em;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      
+      //display: none;
+    }
+    
+    .open{
+      opacity: 1;
+    }
+    
+    @media screen and (min-width: 480px){
+      .container{
+        background-color: orange;
+        height: 3.61em;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      
+      .main-site-nav{
+        flex-direction: row;
+      }
+    }
+    
+  /******* END RESPONSIVE SECTION ********/
+  
+  
+  
+   
+  </style>
+</head>
+
+<body>
+  <!-- BACKGROUND IMAGE ELEMENT -->
+  <div class="page-bg"></div>
+
+  <!------ HEADER SECTION ------->
+  <header class="masthead">
+    <div class="inner-wrapper">
+      <!-- Hamburger Button -->
+      <div class="toggle-button" onclick="myFunction1(this)">
+        <div class="bars bar1"></div>
+        <div class="bars bar2"></div>
+        <div class="bars bar3"></div>
+      </div>
+      
+      <!-- Navigation List -->
+      <nav class="nav-list">
+        <ul class='extremes'>
+          <li class=""><a href="#" class="">About</a></li>
+          <li class=""><a href="#" class="active">Services</a></li>
+        </ul>
+        <ul class='extremes'>
+          <li class=""><a href="#" class="services">Projects</a></li>
+          <li class=""><a href="#" class="">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- Positioned Center Logo -->
+    <div class="logo-wrapper">
+      <img class="firm-logo" src="increase-logo.jpg">
+    </div>
+  </header>
+
+  <a href="https://api.whatsapp.com/send?phone=2348135650706&text=Hello" style="display: inline-block; overflow: hidden; border-radius: 50%; position: fixed; right: 2%;bottom: 1%;">
+    <img src="whatsapp-icon.png" style="height: 65px;width: 65px;">
+  </a>
+  
+  
+  
+  <!--
+  <div class="container">
+    
+      <ul class="main-site-nav">
+        <li class=""><a href="#" class="">Home</a></li>
+        <li class=""><a href="#" class="active">About</a></li>
+        <li class="" style="opacity: 0; white-space: nowrap;"><a href="#" class="active">Company Logo</a></li>
+        <li class=""><a href="#" class="services">Services</a></li>
+        <li class=""><a href="#" class="">Contact</a></li>
+      </ul>
+    
+  </div> 
+  -->
+  
+  <!--
+  <div class="nav-list-wrapper">
+    
+      <ul class="nav-list">
+        <ul class='extremes'>
+          <li class=""><a href="#" class="">Home</a></li>
+          <li class=""><a href="#" class="active">About</a></li>
+        </ul>
+        <ul class='extremes'>
+          <li class=""><a href="#" class="services">Services</a></li>
+          <li class=""><a href="#" class="">Contact</a></li>
+        </ul>
+      </ul>
+    
+  </div>
+  -->
+  
+  
+  <!-- JAVASCRIPT -->
+  <script src="jquery-3.5.1.js"></script>
+  <script>
+    /**
+    let menuButton = document.querySelector('.menu-button');
+    let menu = document.querySelector('.container');
+    let menuList = document.querySelector('.main-site-nav');
+    let logo = menuList.querySelector('li:nth-child(3)');
+    console.log(logo);
+    logo.style.display = 'none';
+    menuButton.addEventListener('click', ()=> {
+      menu.classList.toggle('open');
+    });
+    **/
+    
+    $('document').ready(function(){
+      console.log('Hello world from within jquery');
+      let evenListItems = $('ul:even');
+      console.log(evenListItems);
+    });
+    
+    (function(){
+      console.log('Hello world from within vanilla js');
+    })();
+  </script>
+</body>

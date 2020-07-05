@@ -1,0 +1,176 @@
+<!doctype html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experimentation!</title>
+  <link rel="stylesheet" href="bigcity/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bigcity/css/bootstrap-4.css">
+  <link rel="stylesheet" href="bigcity/css/hero-slider-style.css"> 
+  <link rel="stylesheet" href="bigcity/css/tooplate-style.css">   
+  <link rel="stylesheet" href="increasestylesheet.css">
+  
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  
+  <style>
+    @font-face{
+      font-family: "MyLobster";
+      src: url("Lobster-Regular.ttf");
+    }
+  
+    .tm-text-title{
+      font-family: MyLobster, Lobster, cursive;
+    }
+    
+  </style>
+</head>
+
+<!---------------THE PAGE BODY---------------->
+<body class="the-body">
+  <!-- BACKGROUND IMAGE ELEMENT -->
+  <div class="page-bg"></div>
+  <div class="page-bg2"></div>
+
+
+  <!------ HEADER SECTION ------->
+  <header class="masthead">
+    <div class="inner-wrapper container">
+      <!-- Company Logo -->
+      <div class="logo-wrapper">
+        <img class="firm-logo" src="increase-logo.jpg">
+      </div>
+      
+      <!-- Hamburger Button -->
+      <div class="toggle-button">
+        <div class="bars bar1"></div>
+        <div class="bars bar2"></div>
+        <div class="bars bar3"></div>
+      </div>
+      
+      <!-- Navigation List -->
+      <nav class="nav-list">
+        <ul class='extremes'>
+          <li class=""><a href="#" class="">Home</a></li>
+          <li class=""><a href="#" class="active">About</a></li>
+        </ul>
+        <ul class='extremes'>
+          <li class=""><a href="#" class="services">Projects</a></li>
+          <li class=""><a href="#" class="">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Area -->
+  <!--<main class="page-main">
+    THIS IS THE MAIN
+  </main>-->
+  
+  <!-- THE WELCOME PAGE -->
+  <ul class="cd-hero-slider" id="home about gallery contact">
+    <!-- Page 1 Home -->
+    <li class="selected" id="" style="">
+        <div class="cd-full-width">
+            <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small">
+                <div class="row">                            
+                    <div class="col-xs-12">
+                        <div class="tm-home-container-outer">
+                            <div class="tm-home-container">
+                                <div class="tm-home-title-container">
+                                    <h2 class="tm-text-title text-xs-center tm-home-title">Welcome to Increase Furniture Nigeria Limited</h2>    
+                                </div>
+                                <div class="tm-home-description-container tm-bg-dark-blue">
+                                    <div class="text-xs-left tm-textbox">                                            
+                                        <p class="tm-text tm-home-description">Big City HTML CSS Template is provided by Too*plate website. Feel free *to use this layout for your web projects. Please tell your friends about Tooplate. Thank you. Video BG credit: <a href="https://youtu.be/OeBdM7tykUg" target="_blank">Bangkok Sunset</a></p>
+                                        <p class="tm-text tm-home-description">Quisque mattis pellentesque diam eu vestibulum. Pellentesque augue urna, ultrices sit amet luctus eget, ultricies sit amet ipsum. Nulla sem nisi, commodo sed auctor sed, euismod nec dui. Morbi vitae enim id massa sodales tincidunt a et mi.</p>
+                                        <p><a href="">Learn more about us</a></p>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="tm-home-container-bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .cd-full-width -->
+    </li>
+  </ul>
+
+  <!-- My Section For FlexBox plays -->
+  <ul class="all-sections-container" style="border: solid black 2px; display: none;">
+    <li class="home-section">
+      <div class="section-content" style="background-color: whitesmoke;">
+        <h2>Welcome to Candency Solutions</h2>
+        <p class="">Big City HTML CSS Template is provided by Tooplate website. Feel free to use this layout for your web projects. Please tell your friends about Tooplate. Thank you. Video BG credit: <a href="https://youtu.be/OeBdM7tykUg" target="_blank">Bangkok Sunset</a></p>
+        <p class="">Quisque mattis pellentesque diam eu vestibulum. Pellentesque augue urna, ultrices sit amet luctus eget, ultricies sit amet ipsum. Nulla sem nisi, commodo sed auctor sed, euismod nec dui. Morbi vitae enim id massa sodales tincidunt a et mi.</p>
+      </div>
+    </li>
+  </ul>
+
+
+  <!-- Fixed Whatsapp Button -->
+  <a href="https://api.whatsapp.com/send?phone=2348135650706&text=Hello" class="wa-button">
+    <img src="whatsapp-icon.png">
+  </a>
+  
+  <!-- Quotes Section -->
+  <div class="quote-bg-container">
+    <img class="quote-bg" style="" src="eagle.jpg">
+    <p class="quote-text" style="">The sky is the limit</p>
+  </div>
+
+  <!-- Page Footer -->
+  <footer class="site-footer" style="display: flex; align-items: center; justify-content: center;">
+    <span style="padding: 1em;">FOOTER1</span>
+    <span style="padding: 1em;">FOOTER2</span>
+  </footer>
+  
+  
+  <!-- JAVASCRIPT -->
+  <script src="jquery-3.5.1.js"></script>
+  <script>
+    /**
+    let menuButton = document.querySelector('.menu-button');
+    let menu = document.querySelector('.container');
+    let menuList = document.querySelector('.main-site-nav');
+    let logo = menuList.querySelector('li:nth-child(3)');
+    console.log(logo);
+    logo.style.display = 'none';
+    menuButton.addEventListener('click', ()=> {
+      menu.classList.toggle('open');
+    });
+    **/
+    
+    //JQuery
+    $('document').ready(function(){
+      console.log('Hello world from within jquery');
+      let evenListItems = $('ul:even');
+      console.log(evenListItems);
+      
+      //Display navigation list with sliding motion on 
+      //hamburger button click
+      $(".toggle-button").click(function(){
+        $(".toggle-button").toggleClass("change");
+        $(".nav-list").slideToggle("slow");
+        
+        //$(".nav-list").toggleClass("change");
+        //$(".nav-list").css("transform", "scale(1)");
+      });
+    });
+    
+    //Vanilla Javascript
+    (function(){
+      console.log('Hello world from within vanilla js');
+      
+      window.addEventListener('load', ()=>{
+        //alert('page is loaded');
+        console.log("Hello world from within vanilla js after page is loaded");
+      });
+      
+      window.addEventListener('orientationchange', ()=>{
+        alert('the orientation was changed');
+      });
+      
+    })();
+  </script>
+</body>
