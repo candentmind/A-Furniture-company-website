@@ -1,10 +1,10 @@
 
     :root{
       box-sizing: border-box;
-      //font-size: calc(1vw + 0.68em);
       font-size: 93.75%;
       //--brand-color-1: #29258c;
       --brand-color-1: #221e86;
+      --brand-color-1-1: orangered;
       --brand-color-2: #ec252c;
       --bg-overlay-1: rgba(102, 102, 255, 0.6);
       --shade-1: #dee7ef;
@@ -84,13 +84,8 @@
 
   .masthead{
     background-color: var(--brand-color-1);
-    /*! border-bottom: 2px solid var(--brand-color-1); */
-    /*! border-top: 2px solid var(--brand-color-1); */
     position: relative;
-    /*! z-index: 101; */
     box-shadow: 0px 3px 3px darkblue;
-    /*! height: 4.3rem; */
-    /*! padding: 2px; */
     display: flex;
   }
 	.masthead > .inner-wrapper{
@@ -100,7 +95,7 @@
     justify-content: space-between;
     position: relative;
     /*! margin: 0.4em auto; */
-    height: 4em;
+    height: 4.2em;
     padding: 0;
 		align-items: center;
 	}
@@ -113,9 +108,9 @@
     top: -0.8rem;
     **/
     /*! height: 94px; */
-    width: 5.5em;
+    width: 5.6em;
     border-radius: 50%;
-    border: 2px solid var(--brand-color-1);
+    border: px solid var(--brand-color-1);
     /*! margin: 0 auto; */
     background: var(--brand-color-1);
     position: absolute;
@@ -124,11 +119,9 @@
   .firm-logo{
     border-radius: 50%;
     max-width: 100%;
-    /*! height: 90px; */
-    /*! width: 90px; */
     display: block;
     margin: 0 auto;
-    border: solid var(--brand-color-1) 4px;
+    border: solid var(--brand-color-1) 5.5px;
   }
   .toggle-button{
     margin-left: auto;
@@ -153,7 +146,7 @@
     justify-content: center;
   } 
   .toggle-button:active{
-    transform: scale(0.96);
+    transform: scale(0.96) translate(0.8px, 1.6px);
   }
   .bars{
     width: 28px;
@@ -191,6 +184,7 @@
     background-color: var(--brand-color-1);
     display: none;
     //transform: scaleY(0);
+    z-index: 1;
   }
   .extremes{
     margin: 0;
@@ -206,10 +200,12 @@
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 0.5em 1.6em;
+    padding: 0.45em 1.7em;
+    letter-spacing: 1px;
   }
   .extremes .active{
-    background-color: #ec252c;
+    background-color: #db3c00;
+    text-shadow: 1.5px 2px 2.5px navy;
   }
   
   
@@ -273,7 +269,7 @@
   /* *************************************** RESPONSIVE ************************************** */
   @media screen and (min-width: 430px) {
     .cd-hero-slider{
-      margin-top: 1em;
+      margin-top: 0;
     }
     
   }
