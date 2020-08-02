@@ -42,7 +42,7 @@ Slider
   position: relative;
   overflow: hidden;
 }
-.cd-hero-slider li {
+.cd-hero-slider > li {
   position: absolute;
   /*! top: 0; */
   /*! left: 0; */
@@ -63,7 +63,6 @@ Slider
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
-  //border: solid orange;
 }
 .cd-hero-slider li.move-left {
   /* slide hidden on the left */
@@ -192,7 +191,7 @@ Single slide style
     font-size: 3.2em;
   }
   .cd-hero-slider p {
-    font-size: 1.6rem;
+    /*! font-size: 1.6rem; */
   }
 }
 

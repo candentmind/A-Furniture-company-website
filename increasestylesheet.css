@@ -2,7 +2,7 @@
     :root{
       box-sizing: border-box;
       font-size: 93.75%;
-      //--brand-color-1: #29258c;
+      /*--brand-color-1: #29258c; */
       --brand-color-1: #221e86;
       --brand-color-1-1: orangered;
       --brand-color-2: #ec252c;
@@ -170,13 +170,14 @@
   }
   .nav-list.change{
     //transform: scaleY(1);
+    visibility: visible;
   }
   
   /************* NAVIGATION LIST ********************/
   .nav-list{
     position: absolute;
     right: 0;
-    top: 3.9rem;
+    top: 4.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,8 +186,9 @@
     display: none;
     //transform: scaleY(0);
     z-index: 1;
+    //visibility: hidden;
   }
-  .extremes{
+  .nav-list ul{
     margin: 0;
     padding: 0;
     display: flex;
@@ -194,29 +196,50 @@
     justify-content: space-between;
     list-style: none;
   }
-  .extremes li a{
+  .nav-list li a{
     color: white;
     font-weight: bold;
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 0.45em 1.7em;
+    padding: 0.5em 1.7em;
     letter-spacing: 1px;
+    position: relative;
   }
-  .extremes .active{
+  .nav-list .active{
     background-color: #db3c00;
-    text-shadow: 1.5px 2px 2.5px navy;
+    text-shadow: -1px 1px 5.8px navy;
   }
   
-  
+  /************ ADDED TIMELINE STYLES ***********/
+  .tm-flex.about-body.timeline-bg {
+	   background-color: var(--shade-1);
+	   background-image: url(preview.jpg);
+  }
+  .timeline-header {
+    padding: 0.55em;
+    text-align: center;
+    margin: 0.4em 0;
+    background: var(--shade-1);
+  }
+  .timeline-header h3 {
+	   color: var(--brand-color-1);
+	   margin-bottom: 0.3em;
+  }
+  .tm-flex.about-body.timeline-bg .timeline-header{
+     padding: 1.3em;
+     position: relative;
+     background-image: url(preview.jpg);
+  }
+
   /********* WHATSAPP BUTTON ***********/
   .wa-button{
     display: inline-block; 
     overflow: hidden; 
-    border-radius: 50%; 
+    border-radius: 50%;
     position: fixed; 
     right: 2%;
-    bottom: 1%; 
+    bottom: 1%;
     z-index: 2;
   }
   .wa-button img{
@@ -286,11 +309,6 @@
     .masthead > .inner-wrapper{
       width: 540px;
     }
-    
-    .nav-list{
-      //display: flex;
-    }
-    
   }
   
   @media screen and (min-width: 768px) {
@@ -318,6 +336,39 @@
     
     .masthead > .inner-wrapper{
       width: 960px;
+    }
+    
+    .toggle-button{
+      display: none;
+    }
+    
+    .nav-list{
+      position: static;
+      display: flex !important;
+      margin-left: auto;
+    }
+    .nav-list ul{
+      flex-direction: row;
+    }
+    .nav-list .active::before {
+      position: absolute;
+      content: "";
+      width: 45%;
+      margin: 0 auto;
+      background: var(--brand-color-1);
+      height: 4px;
+      bottom: 0;
+    }
+    .nav-list .active::after {
+      position: absolute;
+      content: "";
+      width: 45%;
+      margin: 0 auto;
+      background: var(--brand-color-1);
+      height: 4px;
+      top: 0;
+      transform: translate(-50%);
+      left: 50%;
     }
   }
   

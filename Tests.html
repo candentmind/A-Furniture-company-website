@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="bigcity/css/bootstrap.min.css">
   <link rel="stylesheet" href="bigcity/css/bootstrap-4.css">
   <link rel="stylesheet" href="bigcity/css/hero-slider-style.css"> 
-  <link rel="stylesheet" href="bigcity/css/tooplate-style.css">   
+  <link rel="stylesheet" href="bigcity/css/tooplate-style.css">
+  <link rel="stylesheet" href="timelinestyle.css">
   <link rel="stylesheet" href="increasestylesheet.css">
   
   <!-- fonts -->
@@ -25,6 +26,79 @@
     .img-seperator{
       height: 10em;
       margin: 0 auto;
+    }
+    
+    
+    #about-div{
+      border: solid black 3px;
+    }
+    .about-body{
+      background: var(--brand-color-1);
+      color: var(--shade-1);
+    }
+    .about-brief{
+      padding: 1em;
+      /*background: var(--brand-color-1);*/
+      flex: 55%;
+    }
+    .about-img{
+      /*color: var(--brand-color-1);*/
+      /*background: var(--shade-1);*/
+      padding: 1em;
+      flex: 45%;
+    }
+    .about-img h2, .about-img p{
+      /*color: inherit;*/
+    }
+    .about-brief h2, .about-brief p{
+      /*color: inherit;*/
+    }
+    .about-header-container{
+      margin-bottom: 0.6em;
+      position: relative;
+    }
+    .about-header-container::before{
+      position: absolute;
+      top: -0.45em;
+      bottom: -7px;
+      left: -0.45em;
+      background: var(--shade-1);
+      width: 46%;
+      z-index: -1;
+      content: "";
+      border-top-left-radius: 0.4em;
+    }
+    .tm-flex{
+      /* justify-content: space-between; */
+    }
+    
+    .about-img{
+      position: relative;
+      padding: 1.5em;
+    }
+    .about-img-wrap{
+      position: relative;
+    }
+    .about-img-wrap::before{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: rgba(250, 250, 250, 0.3);
+    }
+
+    .curvy-svg{
+      /*width: 100%;*/ /*setting the width to 100% of the container
+      means it wouldn't grow wider than its container, regardless of the negative 
+      margin you may set.. tada!! */
+      height: 150px;
+      background-image: url(curvySVG.svg);
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    .services-icon{
+      position: absolute;
     }
   </style>
 </head>
@@ -53,11 +127,9 @@
       
       <!-- Navigation List -->
       <nav class="nav-list">
-        <ul class='extremes'>
-          <li class=""><a href="#" class="">Home</a></li>
-          <li class=""><a href="#" class="active">About</a></li>
-        </ul>
-        <ul class='extremes'>
+        <ul class=''>
+          <li class=""><a href="#" class="active">Home</a></li>
+          <li class=""><a href="#" class="">About</a></li>
           <li class=""><a href="#" class="services">Projects</a></li>
           <li class=""><a href="#" class="">Contact</a></li>
         </ul>
@@ -71,7 +143,8 @@
   </main>-->
   
   <!-- THE WELCOME PAGE -->
-  <ul class="cd-hero-slider" id="home about gallery contact">
+  <ul class="cd-hero-slider" id="home">
+    
     <!-- Page 1 Home -->
     <li class="selected" id="" style="">
         <div class="cd-full-width">
@@ -100,8 +173,137 @@
             </div>
         </div> <!-- .cd-full-width -->
     </li>
+    
   </ul>
+  
+  <ul class="cd-hero-slider" id="about-div" style="">
+    
+    <!-- Page 2 About -->
+    <li class="selected" id="about" style="">
+      <div class="cd-full-width">
+        <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small">
+          <div class="row">  
+            <div class="col-xs-12">                
+              <div class="about-header-container tm-home-title-container">
+                  <h2 class="about-header tm-text-title text-xs-center tm-home-title">Know More About Us</h2>    
+              </div>
+              <div class="tm-flex about-body">
+                  <div class="about-brief">
+                    <h3>ABOUT BRIEF</h3>
+                    <p>
+                      In this section we are going to talk very briefly about the company, its location and how it is specially 
+                      positioned to meet the design specifications of its clients with quality service delivery.
+                    </p>
+                  </div>
+                  <div class="about-img">
+                    <div class="about-img-wrap">
+                      <img src="virtual-tour-link.jpg">
+                    </div>
+                  </div>
+              </div>
 
+              <!------------------------  Products & Services -------------------------------->
+              <div style="background-color: var(--brand-color-1); color: white;">
+                <h3>Products and Services: </h3>
+                <div class="services-list" style="padding: 3.6em; border: solid yellow 2px; text-align: center; position: relative;">
+                  <ul style="border: solid 2px aqua; padding: 0.5em;">
+                    <li>Home & Bank Furniture</li>
+                    <li>Hotel/Event Centres & Worship Centres</li>
+                    <li>Interior Design & Decorations</li>
+                    <li>Quality & Electronic Services</li>
+
+                    
+                  </ul>
+                  <img class="services-icon" src="curtain.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="small-chair.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="closet.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="couch.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="flower.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="wardrobe.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="ceiling-light.svg" style="width: 3.6em;" alt="">
+                  <img class="services-icon" src="drawer.svg" style="width: 3.6em;" alt="">
+                  
+                  <!--<img src="drawing1.svg" alt="services-bg-icons" style="border: solid chartreuse 2px;">-->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="curvy-svg">
+
+          </div>
+
+          <!----------------- SERVICES RENDERED ---------------------->
+          <div class="row">  
+            <div class="col-xs-12">                
+              <div class="tm-flex about-body">
+                  <div class="about-brief">
+                    
+                    <!--<p>
+                      In this section we are going to talk very briefly about the company, its location and how it is specially 
+                      positioned to meet the design specifications of its clients with quality service delivery.
+                    </p>-->
+                  </div>
+                  <div class="about-img">
+                    <div class="about-img-wrap">
+                      <img src="virtual-tour-link.jpg">
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------------------------- TIMELINE BRIEF COMPANY HISTORY ----------------------------------->
+          <div class="row">  
+            <div class="col-xs-12">                
+              <div class="timeline-header">
+                  <h3 class="">Brief Corporate History</h3>    
+              </div>
+              <div class="tm-flex about-body timeline-bg">
+                <ul class="timeline">
+
+                  <!-- Item 1 -->
+                  <li>
+                    <div class="direction-r">
+                      <div class="flag-wrapper">
+                        <span class="flag">Freelancer</span>
+                        <span class="time-wrapper"><span class="time">2013 - present</span></span>
+                      </div>
+                      <div class="desc">My current employment. Way better than the position before!</div>
+                    </div>
+                  </li>
+                  
+                  <!-- Item 2 -->
+                  <li>
+                    <div class="direction-l">
+                      <div class="flag-wrapper">
+                        <span class="flag">Apple Inc.</span>
+                        <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
+                      </div>
+                      <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
+                    </div>
+                  </li>
+                
+                  <!-- Item 3 -->
+                  <li>
+                    <div class="direction-r">
+                      <div class="flag-wrapper">
+                        <span class="flag">Harvard University</span>
+                        <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+                      </div>
+                      <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .cd-full-width -->
+    </li>
+  </ul>
+  
   <!-- My Section For FlexBox plays -->
   <ul class="all-sections-container" style="border: solid black 2px; display: none;">
     <li class="home-section">
@@ -153,11 +355,15 @@
       let evenListItems = $('ul:even');
       console.log(evenListItems);
       
-      //Display navigation list with sliding motion on 
-      //hamburger button click
+      /* Display navigation list with sliding motion on 
+      hamburger button click */
       $(".toggle-button").click(function(){
         $(".toggle-button").toggleClass("change");
         $(".nav-list").slideToggle("slow");
+        
+        //$(".nav-list").css("visibility", "visible");
+        //$(".nav-list").toggleClass("change");
+        
         
         //$(".nav-list").toggleClass("change");
         //$(".nav-list").css("transform", "scale(1)");

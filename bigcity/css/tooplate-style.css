@@ -55,7 +55,7 @@ a:focus {
 }
 
 .tm-section-margin-t { margin-top: 200px; }
-.tm-section-margin-t-small { /*! margin-top: 150px; */ }
+.tm-section-margin-t-small { margin-top: 230px; }
 
 .cd-hero-slider .cd-full-width { padding-top: 0; }
 
@@ -156,9 +156,9 @@ button:focus { outline: none; }
   /*! top: 2rem; */
   //border: solid white;
   //margin-top: 11rem;
-  align-items: center;
-  min-height: 67em; 
-	margin-top: 4.2em; 
+  /*! align-items: center; */
+  min-height: 65em; 
+	/*! margin-top: 4.8em; */ 
 }
   
 .cd-hero-slider li { list-style: none; }
@@ -214,15 +214,17 @@ button:focus { outline: none; }
 	position: absolute;
 	z-index: -1;
 	left: 0;
-	height: 94%;
 	bottom: 0;
 	right: 0;
+	width: 99%;
+	height: 94%;
+	margin: 0 auto;
 }
 
 .tm-home-container-outer {
     position: relative;
     max-width: 840px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .cd-hero-slider h2.tm-text-title {	
@@ -234,6 +236,11 @@ button:focus { outline: none; }
 }
 
 /* About */
+.tm-flex{
+  display: flex;
+  flex-direction: column;
+}
+
 .tm-white-header-container { width: 100%; }
 
 .tm-white-header-container .tm-text-title {
@@ -285,8 +292,8 @@ button:focus { outline: none; }
 }
 
 .cd-full-width {
-	display: -ms-flexbox;
-	/*! display: flex; */
+	/*display: -ms-flexbox;*/
+	display: flex;
     /*-ms-flex-direction: column;*/
         /*! flex-direction: column; */
     /*-ms-flex-align: center;*/
@@ -503,9 +510,8 @@ border-top-color: white; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.5s
 
 @media only screen and (min-width: 720px) {
 	
-	.tm-footer { 
-		-ms-flex-direction: row; 
-			flex-direction: row; 
+	.tm-footer {  
+		flex-direction: row; 
 	}
 
 	.tm-copyright-text { margin-top: 0; }
@@ -529,12 +535,8 @@ border-top-color: white; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.5s
 	}
 
 	.tm-flex { 
-		display: -ms-flexbox; 
-		display: -webkit-box; 
-		display: flex;
-		-ms-flex-pack: center;
-		    -webkit-box-pack: center;
-		        justify-content: center;
+		justify-content: center;
+    flex-direction: row;
 	}
 
 	.tm-2-col-textbox-2 {	
