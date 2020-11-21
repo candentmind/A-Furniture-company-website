@@ -1,0 +1,35 @@
+- Form validation
+- Resize background images
+- Remove class .active from nav-links (<a> elements) and replace instead with 
+  a descendant selector using the .selected class to pinpoint the selected link
+  on the nav
+- Change title from Experimentation to something apt    DONE
+- Include page loader
+- Favicon image
+- RC Number
+- Use @import for getting assets
+- Reduce brightness/harshness of white color
+- implement counter up for achievements
+- Change about us image
+- remove padding from video section
+- add daily quotes to footer section
+- include scroll to top button at lower-end of viewport    DONE
+- intersection observer usage
+- opening hours
+- write html using well structured semantic tags
+  such as nav, main and footer and optimize for Search engines.
+  Also consider using the 'order' property to shift certain elements
+  in the source file as an SEO measure, giving priority to more
+  important/very-relevant blocks first before considering others.
+- reduce images sizes with tinypng
+- fill up the alt attribute for all images with descriptive 
+  texts
+- minify scripts and stylesheets and use minified libraries
+- include daily quotes from brainyquotes in footer section
+- default whatsapp message for whatsapp button cta
+- include poster for interview video
+- search for css creative text animation on genyt.net
+- reorder about page so that 'clients we have worked with'
+  precedes the 'why choose us' section    DONE
+- Still make the whatsapp and backToTop buttons smaller
+- Copy shake animation from nedusinteriors.com for footer section

@@ -1,0 +1,1898 @@
+<!doctype html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Increase Furniture</title>
+  <link rel="stylesheet" href="bigcity/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bigcity/css/bootstrap-4.css">
+  <link rel="stylesheet" href="bigcity/css/hero-slider-style.css">
+  <link rel="stylesheet" href="bigcity/css/tooplate-style.css">
+  <link rel="stylesheet" href="timelinestyle.css">
+  <link rel="stylesheet" href="increasestylesheet.css">
+  <link rel="stylesheet" href="photoswipe.css">
+  <link rel="stylesheet" href="default-skin/default-skin.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/font-awesome.min.css">
+
+  <style>
+
+    .container-offset{
+      padding-left: 8px !important;
+      padding-right: 8px !important; 
+    }
+
+    @font-face {
+      font-family: "MyLobster";
+      src: url("Lobster-Regular.ttf");
+    }
+    @font-face {
+      font-family: "MyDigitalFont";
+      src: url("digital-7 (mono).ttf");
+    }
+
+    /********** THIS COULD SUBSTITUTE THE MAIN ORANGE/RED COLOR *************/
+    /*background-color: #bf4b06;*/
+    /********** THIS COULD SUBSTITUTE THE MAIN ORANGE/RED COLOR *************/
+
+    .tm-text-title {
+      font-family: MyLobster, Lobster, cursive;
+    }
+
+    .subsection-header{
+      position: relative;
+      font-size: 1.45rem;
+    }
+    .subsection-header::before{
+      position: absolute;
+      content: ;
+      height: 2.6px;
+      width: 20%;
+      bottom: 0;
+      background-color: navy;
+      bottom: -0.8em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .ornamental-decorator {
+      height: 5.0em;
+      margin: 0 auto;
+      width: 70%;
+      position: relative;
+    }
+    .demo-gallery .ornamental-decorator{
+      height: 5.0em;
+      width: 60%;
+    }
+
+    @media screen and (min-width: 460px) {
+      .ornamental-decorator {
+        width: 60%;
+      }
+      .demo-gallery .ornamental-decorator{
+        height: 5.0em;
+        width: 50%;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .ornamental-decorator {
+        height: 7.0em;
+        margin: 0 auto;
+        width: 48%;
+      }
+      .demo-gallery .ornamental-decorator{
+        height: 4.0em;
+        width: 38%;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .ornamental-decorator {
+        height: 6.0em;
+        margin: 0 auto;
+        width: 32%;
+      }
+      .demo-gallery .ornamental-decorator{
+        height: 4.0em;
+        width: 28%;
+      }
+    }
+
+    .site-nav-button {
+      display: block;
+      background-color: var(--brand-color-1);
+      border-style: outset;
+      border-color: orange;
+      border-width: 3px;
+      margin: 0 auto;
+      margin-top: 1.8em;
+      position: relative;
+      z-index: 2;
+      padding: 0.2em;
+      font-weight: bold;
+      border-radius: 0.4em;
+    }
+    .site-nav-button a{
+      padding: 0.2em;
+      background-color: var(--brand-color-1);
+      display: inline-block;
+    }
+    .clientele-section .site-nav-button{
+      border-color: orangered;
+      background: ivory;
+    }
+    .clientele-section .site-nav-button a{
+      color: var(--brand-color-1);
+      background: ivory;
+    }
+
+    /* ===================================================================
+                                ABOUT SECTION
+    ====================================================================== */
+    #about-div {
+      border: solid black 3px;
+    }
+    .about-body {
+      background: var(--brand-color-1);
+      color: var(--shade-1);
+      padding: 1em 1em;
+      /*display: flex;*/
+    }
+    .about-header-container {
+      margin-bottom: 0.6em;
+      position: relative;
+    }
+    .about-header-container::before {
+      position: absolute;
+      top: -0.35em;
+      bottom: -0.35em;
+      left: -0.35em;
+      background: var(--shade-1);
+      width: 46%;
+      z-index: -1;
+      content: "";
+      border-top-left-radius: 0.4em;
+    }
+    .about-intro {
+      padding: 1.5em;
+      border-left: solid orange 2px;
+      border-top: solid orange 2px;
+      border-bottom: solid orange 2px;
+    }
+    .about-intro::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 25%;
+      height: 60%;
+      right: 14px;
+      border-top: solid orange 2px;
+      border-right: solid orange 2px;
+    }
+    @media screen and (min-width: 992px) {
+      .about-intro::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 25%;
+        height: 10%;
+        right: -20%;
+        border-top: solid orange 2px;
+        border-right: solid orange 2px;
+      }
+    }
+    .about-stats {
+      /*box-shadow: 0px 2px 10px rgba(0, 0, 0, .3);*/
+      box-shadow: 0px 2px 10px rgba(9, 2, 2, 0.3);
+      padding: 20px 10px;
+      text-align: center;
+      background-color: #2f2b93;
+      margin-bottom: 0.6em;
+    }
+    .about-stats h4 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+    .about-stats p {
+      font-size: 15px;
+      margin-bottom: 0px;
+      line-height: 20px;
+    }
+    .about-intro-pic {
+      position: relative;
+      /*padding: 1.5em;*/
+      margin-top: 3em;
+    }
+    .about-intro-pic-wrap {
+      box-shadow: -6px 6px aliceblue;
+    }
+    @media screen and (min-width: 992px) {
+      .about-intro-pic-wrap {
+        box-shadow: -10px 10px aliceblue;
+      }
+    }
+    .about-intro-pic-wrap::before {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: rgba(250, 250, 250, 0.3);
+    }
+
+    .curvy-svg {
+      width: 100%;
+      /*setting the width to 100% of the container
+      means it wouldn't grow wider than its container, regardless of the negative 
+      margin you may set.. tada!! */
+      height: 150px;
+      background-image: url(curvy-svg.svg);
+      background-repeat: no-repeat;
+    }
+    .curvy-svg:last-child{
+      /*background-image: url(curvy-svg2.svg);*/
+    }
+    /* ===================================================================
+                              END  ABOUT SECTION
+    ====================================================================== */
+
+    /* ===================================================================
+                        VISION AND MISSION SECTION
+    ====================================================================== */
+    .vision-mission-section {
+      /*background-color: var(--shade-1);*/
+      padding: 3em;
+      background-image: linear-gradient(50deg, navy, var(--shade-1), lightblue, blue);
+      margin-top: 0.35em;
+      padding: 1em;
+    }
+    .vision-graphic, .mission-graphic{
+      transform: scale(0.85);
+    }
+    .vision-statement,
+    .mission-statement {
+      background-color: white;
+      padding: 1em;
+      box-shadow: 0px 2px 10px gray;
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(49, 45, 45);
+      align-items: center;
+    }
+    .vision-statement h6,
+    .mission-statement h6{
+      text-align: center;
+    }
+    .vision-statement {
+      margin-bottom: 0.35em;
+    }
+    .vision-statement::before,
+    .mission-statement::after {
+      position: absolute;
+      content: "";
+      border: solid transparent 16px;
+      border-bottom: solid red 26px;
+    }
+    .vision-statement::before {
+      top: -20px;
+      left: 10px;
+      transform: rotate(45deg);
+    }
+    .mission-statement::after {
+      bottom: -12px;
+      right: 10px;
+      transform: rotate(-45deg);
+    }
+    /* ===================================================================
+                      END VISION AND MISSION SECTION
+    ====================================================================== */
+
+    /* ===================================================================
+                                SERVICES SECTION
+    ====================================================================== */
+    .services-section {
+      background-color: var(--brand-color-1);
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1em 1em 1.5em 1em;
+      margin-top: 0.35em;
+    }
+    .services-section h3 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .services-section .subsection-header::after {
+      content: "";
+      position: absolute;
+      width: 12%;
+      height: 4px;
+      background: white;
+      height: 2px;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .services-gallery {
+      flex-basis: 50%;
+      padding: 2.5em 1em 0em 1em;
+      text-align: center;
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+    .services-gallery .services-pic:nth-of-type(even) {
+      display: none;
+    }
+    .services-gallery-left .services-pic:nth-of-type(1) {
+      border: solid white;
+      /*transform: rotate(5deg);*/
+      /*flex-basis: 50%;*/
+      /*display: none;*/
+      transform: rotate(-5deg);
+    }
+    .services-gallery-left .services-pic:nth-of-type(2) {
+      border: solid orange;
+      transform: rotate(8deg) translate(-0.4em, 0.7em);
+      width: 90%;
+      /*flex-basis: 50%;*/
+      display: none;
+    }
+    .services-gallery-right .services-pic:nth-of-type(1) {
+      border: orange solid;
+      transform: rotate(3deg);
+      /*flex-basis: 50%;*/
+    }
+    .services-gallery-right .services-pic:nth-of-type(2) {
+      border: solid white;
+      transform: rotate(-8deg) translate(0.4em);
+      /*flex-basis: 50%;*/
+      display: none;
+    }
+    .services-main {
+      padding: 3em;
+      text-align: center;
+      position: relative;
+      /*flex-basis: 70%;*/
+      align-self: flex-start;
+      margin: 0 auto;
+      /*order: 1;*/
+      /*flex-basis: 100%;*/
+    }
+    .services-main .services-list {
+      padding: 1em 0.4em;
+      text-shadow: 0.3px 0.3px aliceblue;
+      margin: 0.4em;
+      list-style: none;
+	  text-align: center;
+    }
+    .services-main .services-list li {
+      text-shadow: 1px 0px white;
+      letter-spacing: 1.2px;
+	  border-bottom: 1px solid gray;
+    }
+    .services-icon {
+      position: absolute;
+      width: 3em;
+    }
+    .top {
+      top: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .bottom {
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .top-left {
+      top: 24%;
+      left: 2%;
+      transform: translate(-9%, -6%);
+    }
+    .top-right {
+      top: 25%;
+      right: 2%;
+      transform: translate(6%, -18%);
+    }
+    .bottom-left {
+      bottom: 24%;
+      left: 2%;
+      transform: translate(-10%, 18%);
+    }
+    .bottom-right {
+      bottom: 24%;
+      right: 2%;
+      transform: translate(6%, 18%);
+    }
+    /* ===================================================================
+                                SERVICES SECTION
+    ====================================================================== */
+
+    .page-divider {
+      position: relative;
+    }
+
+    .page-divider:last-child {
+      display: none;
+    }
+
+    
+    /* ===================================================================
+                    BORROWED STYLES FOR TESTING WHY US SECTION
+    ====================================================================== */
+    .why-us-section{
+	  padding: 1.5em 1em;
+      background-color: var(--brand-color-1);
+      margin-top: 0.4em;
+      border-radius: 0.5em;
+      background: #1b46ac;
+      background-color: var(--brand-color-1);
+	  }  
+    .why-us-section-title h3{
+      font-size: 28px;
+    }
+	  .why-us-section-title p{
+      font-size: 14px;
+    }
+    .why-us-points{
+      background: #ffffff;
+      margin-bottom: 0;
+      border-radius: 5em 0px;
+      /*box-shadow: 0 7px 10px #e6e6e6;*/
+      text-align: center;
+      padding: 0.8em;
+      position: relative;
+      color: var(--brand-color-1);
+      background-color: var(--brand-color-1);
+      color: var(--shade-1);
+	  border-top: orange solid;
+    }
+    .why-us-points h2{
+      position: relative;
+      margin-bottom: 1em;
+    }
+    .why-us-points h2::before {
+      position: absolute;
+      content: "";
+      height: 2.6px;
+      width: 20%;
+      bottom: 0;
+      background: white;
+      bottom: -0.8em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+	/*
+    .why-us-points::before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 80%;
+      background-color: transparent;
+      top: 0;
+      border-top: 4px solid orangered;
+      left: 0;
+      border-radius: 4em 0;
+    }
+	*/
+    .section-title{
+      color: white;
+      margin-bottom: 1em;
+    }
+    .why-us-icon{
+      width: 4em;
+      height: 4em;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .why-us-icon i{
+      font-size: 50px;
+      color: #ffffff;
+    }
+    .why-us-icon img{
+      position: relative;
+      top: 0.6em;
+      width: 4em;
+      height: 4em;
+    }
+    .why-us-points h2{
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .clientele-section{
+      background-color: var(--shade-1);
+      background-color: white;
+      padding: 0.8em 1.3em;
+      margin: 0.3em 0;
+    }
+    .clientele-section .subsection-header{
+      font-size: 1.3em;
+    }
+    .clientele-section .subsection-header::before{
+      position: absolute;
+      content: "";
+      height: 2.6px;
+      width: 12%;
+      background: navy;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .clientele-section .row{
+      justify-content: center;
+    }
+    .clientele-section figure{
+      text-align: center;
+      align-self: center;
+    }
+    .clientele-section .section-title.text-center{
+      color: var(--brand-color-1);
+    }
+    .clientele-section img{
+      transform: scale(0.85); 
+    }
+    
+
+    /* ===================================================================
+                  PROJECTS/PRODUCTS CATALOG GALLERY SECTION
+    ====================================================================== */
+    .image-grid-cell{
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    @media screen and (max-width: 992px){
+      .demo-gallery > section:last-child .image-grid-cell:last-child{
+        /*display: none;*/
+      }
+    }
+    .gallery-grid{
+      display: flex;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery-grid2{
+      padding-bottom: 1.5em;
+    }
+    .image-wrap{
+      padding: 0;
+      display: flex;
+      max-width: 50%;
+      flex: 0 0 50%;
+      justify-content: center;
+      text-align: center;
+    }
+    @media screen and (min-width: 810px){
+      .image-wrap{
+        max-width: 33.33%;
+        flex: 0 0 33.33%;
+      }
+    }
+    .image-wrap > a{
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .image-wrap > a:before {
+      position: absolute;
+      left: 0%;
+      top: 0%; 
+      width: 100%;
+      height: 100%;
+      background: hsla(240, 27%, 40%, 0.7);
+      opacity: .55;
+      content: "";
+      transition: all .3s;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+    }
+    .image-wrap > a:hover:before, .image-wrap > a:active:before  {
+      transform: scaleY(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    .image-wrap > a i{
+      position: absolute;
+      font-size: 2em;
+      transform: scaleY(0);
+      transform-origin: 0 0;
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+    .image-wrap > a:hover i{
+      visibility: visible;
+      transition: all 0.5s;
+      transform: scaleY(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+    @media screen and (max-width: 810px){
+      .image-wrap > a, .image-wrap > a > i, .image-wrap > a::before{
+        visibility: visible; 
+        transform: scale(1);
+        color: gainsboro;
+      }
+    }
+    .demo-gallery{
+      flex-direction: column;
+    }
+    .demo-gallery > section{
+      margin: 0 auto;
+      /*background: var(--shade-1);*/
+    }
+    .demo-gallery .sticky-header{
+      text-align: center;
+      padding: 0.6em;
+      /*margin-top: -0.5em;*/
+      margin-bottom: unset;
+      background-color: var(--brand-color-1);
+      position: sticky;
+      z-index: 3;
+      top: -0.5px;
+    }
+    .demo-gallery .sticky-header h5{
+      /*padding-top: 0.6em;*/
+      padding-bottom: 0.2em;
+      color: thistle;
+      color: hsla(0, 0%, 96.1%, 0.85);
+    }
+    .demo-gallery hr{
+      margin: 0.8em -10px;
+      margin-bottom: 0.3em;
+      background: grey;
+    }
+    .gallery-menu{
+      margin: 0;
+    }
+    figcaption{
+      display: none;
+    }
+    .btn-wrapper{
+      position: relative;
+      margin-top: -1em;
+    }
+    .btn-wrapper::before{
+      position: absolute;
+      content: "";
+      color: white;
+      background: whitesmoke;
+      height: 1.6px;
+      width: 100%;
+      top: 50%;
+    }
+    
+
+    /* 
+       Rulesets for buttons used for selecting
+       different categories of catalog images   
+    */
+    .hvr-rectangle-out {
+      display: inline-block;
+      vertical-align: middle;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      /*transition-property: color;*/
+      transition-duration: 0.3s;
+      background: hsl(242.3, 54.7%, 37.3%);
+      border-color: hsl(242.3, 54.7%, 37.3%);
+      color: hsla(0, 0%, 96.1%, 0.66);
+    }
+    .hvr-rectangle-out::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: thistle;
+      transform: scale(0);
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+    .hvr-rectangle-out:hover::before, .hvr-rectangle-out:focus::before, .hvr-rectangle-out:active::before {
+      transform: scale(1);
+    }
+    .filter-button-group button:hover, .filter-button-group button:focus, .filter-button-group button:active{
+      color: blue;
+    }
+    .filter-button-group button.active{
+      box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);	
+      background: thistle;
+      border-color: thistle;
+      color: blue;
+    }
+    /* 
+      End buttons rulesets   
+    */
+    
+    /* ===================================================================
+                           CONTACT SECTION
+    ====================================================================== */
+    .contact-section{
+      background: var(--brand-color-1);
+      color: var(--shade-1);
+      padding: 1em 1em;
+      color: whitesmoke;
+    }
+    @media screen and (max-width: 768px){
+      .contact-section iframe{
+        height: 400px;
+      }
+    }
+    .contact-section section:not(:last-child){
+      margin-bottom: 1.2em;
+    }
+    .contact-section section:nth-child(2){
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-section li{
+      box-shadow: 0px 2px 10px rgba(9, 2, 2, 0.3);
+      background-color: #2f2b93;
+      list-style: unset;
+      overflow: hidden;
+    }
+    .contact-section li:not(:first-child){
+      margin-top: 0.8em;
+    }
+    .contact-section li i{
+      float: left;
+      width: 15%;
+      padding: 0.5em;
+      padding-top: 0.8em;
+    }
+    .contact-section li span{
+      float: right;
+      width: 85%;
+    }
+    .contact-section li span a{
+      word-break: break-all;
+    }
+    
+    /* ===================================================================
+                             CUSTOM FIXES
+    ====================================================================== */
+    @media screen and (max-width: 576px){
+      .my-col-xs-6{
+        float: left !important;
+        max-width: 50%;
+      }
+    }
+
+    .image-body{
+      padding-bottom: unset;
+      padding: 1em 0.5em;
+    }
+    /* ===================================================================
+                             END CUSTOM FIXES
+    ====================================================================== */
+    .dmtop.show {
+      bottom: 7px;
+    }
+    .dmtop {
+      background-color: hsla(255, 100%, 58%, 0.7);
+      z-index: 100;
+      width: 42px;
+      height: 42px;
+      line-height: 30px;
+      position: fixed;
+      bottom: -100px;
+      text-align: center;
+      font-size: 20px;
+      color: #ffffff !important;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+      border: whitesmoke solid 1px;
+      left: 1.5%;
+      display: block;
+      border-radius: 40%;
+    }
+    .dmtop i{
+      font-size: 2em;
+      position: relative;
+      top: -0.03em;
+    }
+  </style>
+
+  
+</head>
+
+<!----------------------------------------------------------------------------------------------------->
+<!--------------- THE PAGE BODY ---------------->
+<!----------------------------------------------------------------------------------------------------->
+
+<body class="the-body">
+  <!-- BACKGROUND IMAGE ELEMENT -->
+  <div class="page-bg"></div>
+  <div class="page-bg2"></div>
+
+
+  <!------ HEADER SECTION ------->
+  <header class="masthead">
+    <div class="inner-wrapper container">
+      <!-- Company Logo -->
+      <div class="logo-wrapper">
+        <img class="firm-logo" src="increase-logo.jpg">
+      </div>
+
+      <!-- Hamburger Button -->
+      <div class="toggle-button">
+        <div class="bars bar1"></div>
+        <div class="bars bar2"></div>
+        <div class="bars bar3"></div>
+      </div>
+
+      <!-- Navigation List -->
+      <nav class="nav-list">
+        <ul class=''>
+          <li class=""><a href="javascript:void(0)" class="nav-list-link active" data-name="home">Home</a></li>
+          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="about">About</a></li>
+          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="projects">Projects</a></li>
+          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Area -->
+  <!--<main class="page-main">
+    THIS IS THE MAIN
+  </main>-->
+ 
+  <ul class="cd-hero-slider">
+
+    <!------------------------------------------------------------------------------------->
+    <!--------------------------------- HOME/WELCOME PAGE --------------------------------->
+    <!------------------------------------------------------------------------------------->
+    <!-- Page 1 -->
+    <li class="selected" id="home">
+      <div class="cd-full-width">
+        <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="tm-home-container-outer">
+                <div class="tm-home-container">
+                  <div class="tm-home-title-container">
+                    <h2 class="tm-text-title text-xs-center tm-home-title">Welcome to Increase Furniture Nigeria Limited
+                    </h2>
+                  </div>
+                  <div class="tm-home-description-container tm-bg-dark-blue">
+                    <div class="text-xs-left tm-textbox">
+                      <p class="tm-text tm-home-description">Big City HTML CSS Template is provided by Too*plate
+                        website. Feel free *to use this layout for your web projects. Please tell your friends about
+                        Tooplate. Thank you. Video BG credit: <a class="site-nav-link"
+                          href="https://youtu.be/OeBdM7tykUg" target="_blank">Bangkok Sunset</a></p>
+                      <p class="tm-text tm-home-description">Quisque mattis pellentesque diam eu vestibulum.
+                        Pellentesque augue urna, ultrices sit amet luctus eget, ultricies sit amet ipsum. Nulla sem
+                        nisi, commodo sed auctor sed, euismod nec dui. Morbi vitae enim id massa sodales tincidunt a et
+                        mi.</p>
+                      <button class="site-nav-button"><a href="javascript:void(0)">Learn more about us</a></button>
+                    </div>
+                    <img class="ornamental-decorator img-fluid" src="svg-separator2.svg">
+
+                    <!--
+                    <div class="row">
+                      <div class="col-lg-6"><img src="virtual-tour-link.jpg"></div>
+                      <div class="col-lg-6"><img src="virtual-tour-link.jpg"></div>
+                    </div>
+                    -->
+                  </div>
+                </div>
+                <div class="tm-home-container-bg"></div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- .cd-full-width -->
+    </li>
+
+    <!------------------------------------------------------------------------------------->
+    <!------------------------------ ABOUT & SERVICES PAGE -------------------------------->
+    <!------------------------------------------------------------------------------------->
+    <!-- Page 2 -->
+    <li class="" id="about">
+      <div class="cd-full-width">
+        <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small container-offset">
+
+          <!---------------------------------- PAGE HEADER TITLE ------------------------------------>
+          <div class="page-header">
+            <div class="row">
+              <div class="col-12">
+                <div class="about-header-container tm-home-title-container">
+                  <h2 class="about-header tm-text-title text-xs-center tm-home-title">Know More About Us</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--------------------------------------  ABOUT - SUMMARY SECTION ----------------------------------->
+          <section class="about-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="about-intro">
+                  <h3>ABOUT BRIEF</h3>
+                  <p>
+                    In this section we are going to talk very briefly about the company, its location and how it is
+                    specially
+                    positioned to meet the design specifications of its clients with quality service delivery.
+                  </p>
+                  <div class="row">
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <div class="about-stats">
+                        <h4><span class="counter">8</span><span> + </span></h4>
+                        <p>Experience Years</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                      <div class="about-stats">
+                        <h4><span class="counter">19</span><span> + </span></h4>
+                        <p>Experience Years</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="about-intro-pic">
+                  <div class="about-intro-pic-wrap">
+                    <img src="virtual-tour-link.jpg" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="vision-mission-section">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="vision-statement">
+                  <h6 class="col-12">vision</h6>
+                  <div class="col-4">
+                    <div class="vision-graphic">
+                      <img src="vision-icon.svg" alt="vision-graphic">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div>This is the vision statement</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="mission-statement">
+                  <h6 class="col-12">mission</h6>
+                  <div class="col-4">
+                    <div class="mission-graphic">
+                      <img src="mission-icon.svg" alt="mission-graphic">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div>This is the mission statement</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-----------------------------------  PRODUCTS & SERVICES SECTION ----------------------------->
+          <section class="services-section">
+            <div class="row">
+              <h3 class="subsection-header">Products and Services</h3>
+              <hr>
+              <div class="services-main">
+                <ul class="services-list">
+                  <li>Home & Bank Furniture</li>
+                  <li>Corporate Office</li>
+                  <li>Upholstery and Reupholstery</li>
+                  <li>Hotel/Event Centres & Worship Centres</li>
+                  <li>Interior Design & Decorations</li>
+                  <li>Quality Electronic Gadgets</li>
+                </ul>
+                <img class="services-icon top" src="small-chair.svg" alt="">
+                <img class="services-icon bottom" src="ceiling-light.svg" alt="">
+                <img class="services-icon top-left" src="couch.svg" alt="">
+                <img class="services-icon top-right" src="wardrobe.svg" alt="">
+                <img class="services-icon bottom-left" src="television.svg" alt="">
+                <img class="services-icon bottom-right" src="drawer.svg" alt="">
+              </div>
+              <div class="services-gallery services-gallery-left">
+                <img class="services-pic" src="wood-shavings-zeke.jpg" alt="">
+                <img class="services-pic" src="drill1-arctic.jpg" alt="">
+              </div>
+              <div class="services-gallery services-gallery-right">
+                <img class="services-pic" src="man-using-hammer-arctic.jpg" alt="">
+                <img class="services-pic" src="jack-plane-napa.jpg" alt="">
+              </div>
+            </div>
+          </section>
+
+          <!------------------------------ TIMELINE BRIEF COMPANY HISTORY SECTION ---------------------------->
+          <section class="timeline-section">
+            <div class="row">
+              <div class="col-12">
+                <div class="timeline-header">
+                  <h3 class="subsection-header">Brief Corporate History</h3>
+                </div>
+                <div class="tm-flex about-body timeline-bg">
+                  <h6>where we are going is built on where we have been</h6>
+                  <ul class="timeline">
+
+                    <!-- Item 1 -->
+                    <li class="timeline-item">
+                      <div class="event-time-wrapper">
+                        <span class="event-time">the event time</span>
+                      </div>
+                      <div class="event-content-parent">
+                        <div class="flag-wrapper">
+                          <span class="flag">Startup and Humble Beginnings</span>
+                        </div>
+                        <div class="desc">My current employment. Way better than the position before!</div>
+                      </div>
+                    </li>
+
+                    <!-- Item 2 -->
+                    <li class="timeline-item">
+                      <div class="event-content-parent">
+                        <div class="flag-wrapper">
+                          <span class="flag">Award, Accolades and Recognition</span>
+                        </div>
+                        <div class="desc">
+                          My first employer. All the stuff I've learned and projects I've been working on.
+                          <video controls src="whoiswho-award-interview.mp4">
+
+                          </video>
+                        </div>
+                      </div>
+                      <div class="event-time-wrapper">
+                        <span class="event-time">the event time</span>
+                      </div>
+                    </li>
+
+                    <!-- Item 3 -->
+                    <li class="timeline-item">
+                      <div class="event-time-wrapper">
+                        <span class="event-time">the event time</span>
+                      </div>
+                      <div class="event-content-parent">
+                        <div class="flag-wrapper">
+                          <span class="flag">Further Growth and Advancement</span>
+                        </div>
+                        <div class="desc">A description of all the lectures and courses I have taken and my final
+                          degree?</div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--------------------------- CLIENTELE SECTION --------------------------->
+          <section class="clientele-section">
+            <div class="section-title text-center">
+              <h3 class="subsection-header">Some Clients We've Worked With</h3>
+            </div><!-- end title -->
+
+            <div class="row">
+              <figure class="col-6 col-sm-3"><img src="uba-bank-logo.png" alt=""></figure>
+              <figure class="col-6 col-sm-3"><img src="NIPSS-logo.png" alt=""></figure>
+              <figure class="col-6 col-sm-3"><img src="pw-construction-logo.png" alt=""></figure>
+              <figure class="col-6 col-sm-3"><img src="diamond-bank-logo.png" style="transform:scale(1);" alt=""></figure>
+            </div>
+
+            <button class="site-nav-button"><a href="javascript:void(0)">Explore some of our projects</a></button>
+          </section>
+
+          <!--------------------------- WHY US SECTION TEST --------------------------->
+          <section class="why-us-section">
+            <div class="section-title text-center">
+              <h3 class="subsection-header">Why Choose Us?</h3>
+            </div><!-- end title -->
+        
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="why-us-points">
+                  <figure class="why-us-icon">
+                    <img src="quality-icon-orange.svg" alt="quality-icon">
+                  </figure>
+                  <h2>Quality, Excellence, Safety & Comfort</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+                </div>
+              </div><!-- end col -->
+              <div class="col-sm-6">
+                <div class="why-us-points">
+                  <figure class="why-us-icon">
+                    <img src="moneyvalue-icon-orange.svg" alt="money-icon">
+                  </figure>
+                  <h2>More Value For Your Money</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+                </div>
+              </div><!-- end col -->
+              <div class="col-sm-6">
+                <div class="why-us-points">
+                  <figure class="why-us-icon">
+                    <img src="time-icon-orange.svg" alt="time-icon">
+                  </figure>
+                  <h2>Timely Service Delivery</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+                </div>
+              </div><!-- end col -->
+              <div class="col-sm-6">
+                <div class="why-us-points">
+                  <figure class="why-us-icon">
+                    <img src="handshake-icon-orange.svg" alt="handshake-icon">
+                  </figure>
+                  <h2>Good Customer Relationship & Support</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua.</p>
+                </div>
+              </div><!-- end col -->
+            </div><!-- end row -->
+          </section>
+
+          <!--------------------------- DECORATIVE CURVY SVG SECTION DIVIDER --------------------------->
+          <section></section>
+
+          <!--------------------------- TESTIMONIALS SECTION --------------------------->
+          <section></section>
+        </div>
+      </div> <!-- .cd-full-width -->
+    </li>
+
+    <!------------------------------------------------------------------------------------->
+    <!----------------------------------- GALLERY PAGE ------------------------------------>
+    <!------------------------------------------------------------------------------------->
+    <!-- Page 3 -->
+    <li class="" id="gallery">
+      <div class="cd-full-width">
+        <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small container-offset">
+
+          <!---------------------------------- PAGE HEADER TITLE ------------------------------------>
+          <div class="page-header">
+            <div class="row">
+              <div class="col-12">
+                <div class="about-header-container tm-home-title-container">
+                  <h2 class="about-header tm-text-title text-xs-center tm-home-title">Gallery Of Projects and Products</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-------------------------------------- GALLERY IMAGES PLATFORM ----------------------------------->
+          <section class="about-body image-body">
+            <div class="demo-gallery">
+              <!----------------------------- Previous Projects --------------------------->
+              <section>
+                <div class="sticky-header">
+                  <h5>A Few Completed Projects</h5>
+                </div>
+                <div class="gallery-grid">
+                  <figure class="image-wrap">
+                    <a href="televisionconsole.png" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="televisionconsole-tn_m.PNG" alt="This is image 1" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                  <figure class="image-wrap">
+                    <a href="diningfurniture.PNG" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="diningfurniture-tn_m.PNG" alt="This is image 2" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                  <figure class="image-wrap">
+                    <a href="banklongplatform.PNG" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="banklongplatform-tn_m.PNG" alt="This is image 3" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                  <figure class="image-wrap">
+                    <a href="officetables.PNG" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="officetables-tn_m.PNG" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                  <figure class="image-wrap">
+                    <a href="officewardrobe.PNG" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="officewardrobe-tn_m.PNG" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                  <figure class="image-wrap">
+                    <a href="kitchencabinet.PNG" data-size="624x550">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="kitchencabinet-tn_m.PNG" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This a television console</figcaption>
+                  </figure>
+                </div>
+                <img class="ornamental-decorator img-fluid" src="svg-separator2.svg">
+              </section>
+              
+              <!----------------------------- Other Product Catalog --------------------------->
+              <section>
+                <div class="sticky-header">
+                  <h5>General Product Catalog</h5>
+                  <div class="controls button-group filter-button-group text-center">
+                    <button class="hvr-rectangle-out active" data-filter="all">All</button>
+                    <button class="hvr-rectangle-out" data-filter=".office">Office & Corporate</button>
+                    <button class="hvr-rectangle-out" data-filter=".home">Home & Hospitality</button>
+                    <button class="hvr-rectangle-out" data-filter=".decor">Decor</button>
+                    <button class="hvr-rectangle-out" data-filter=".electronics">Electronics</button>
+                  </div>
+                </div>
+                
+                <div class="gallery-grid gallery-grid2">
+                  <figure class="image-wrap mix office">
+                    <a href="gallery_img-01.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-01-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix office">
+                    <a href="gallery_img-02.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-02-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>         
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-03.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-03-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-04.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-04-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-05.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-05-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-06.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-06-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-07.jpg" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-07-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix decor">
+                    <a href="gallery_img-08.png" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-08-sm.png" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix decor">
+                    <a href="gallery_img-09.png" data-size="1024x1024">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-09-sm.png" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                </div>
+                <img class="ornamental-decorator img-fluid" src="svg-separator2.svg">
+              </section>
+              
+            </div>
+          </section>
+        </div>
+      </div> <!-- .cd-full-width -->
+    </li>
+
+    <!------------------------------------------------------------------------------------->
+    <!----------------------------------- CONTACT PAGE ------------------------------------>
+    <!------------------------------------------------------------------------------------->
+    <!-- Page 4 -->
+    <li class="" id="contact">
+      <div class="cd-full-width">
+        <div class="container js-tm-page-content tm-page-1 tm-section-margin-t-small container-offset">
+
+          <!---------------------------------- PAGE HEADER TITLE ------------------------------------>
+          <div class="page-header">
+            <div class="row">
+              <div class="col-12">
+                <div class="about-header-container tm-home-title-container">
+                  <h2 class="about-header tm-text-title text-xs-center tm-home-title">Contact</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <section class="contact-section">
+            <div class="row">
+              <!----------------------------- Contact Details --------------------------->
+              <section class="col-lg-6">
+                <div class="">
+                  <li class="d-flex">
+                    <i class="fa fa-map-marker p-2 px-4 pt-3" style="font-size: 1.35em;"></i>
+                    <span class="tm-text p-2">Phasellus lacus mi, porta vel sodales nec, faucibus non eros. 
+                    Nulla at quam vel risus laoreet tincidunt in in sem.</span>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fa fa-phone p-2 px-4 pt-3" style="font-size: 1.1em;"></i>
+                    <span class="tm-text p-2"><a href="tel:+2348067105873">
+                      Tel: +234 806 7105 873</a></span>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fa fa-envelope p-2 px-4 pt-3"></i>
+                    <span class="tm-text p-2"><a href="javascript:void(0)">
+                      Email: chris@increasefurniture.com.ng</a></span>
+                  </li>
+                  <li class="d-flex">
+                    <i class="fa fa-clock-o p-2 px-4 pt-3" style="font-size: 1.18em;"></i>
+                    <span class="tm-text p-2">Opening Hours:
+                      <br>
+                      Mon - Sat (8:30 am - 6:00pm)
+                    </span>
+                  </li>
+                </div>
+              </section>
+              
+              <!----------------------------- Contact Form --------------------------->
+              <section class="col-lg-6">
+                <div class="">
+                  <!-- contact form -->
+                  <form action="index.html" method="POST" class="tm-contact-form">
+                      <div class="form-group">
+                          <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                      </div>                                                                                                            
+                      <div class="form-group">
+                          <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                      </div>                                                    
+                      <div class="form-group">
+                          <textarea id="contact_message" name="contact_message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+                      </div>
+                      <button type="submit" class="tm-submit-btn">Send</button>                                                
+                  </form> 
+                </div>
+              </section>
+
+              <!----------------------------- Google Map --------------------------->
+              <section class="col-12">
+                <div class="">
+                  <h5 class="" style="text-align: center; text-align: center; font-size: 1.1em;
+                  color: gainsboro;">Locate us on google map</h5>
+                  <noscript>Google Map</noscript>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.995829127434!2d8.864684314311214!3d9.850715978290793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1053753f603cbdf5%3A0x690298f31e03545d!2sINCREASE%20FURNITURES%20AND%20ELECTRONICS!5e0!3m2!1sen!2sng!4v1601851179934!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+              </section>
+            </div>
+          </section>
+
+        </div>
+      </div> <!-- .cd-full-width -->
+    </li>
+
+  </ul>
+
+  <!-- Scroll to top -->
+  <a href="javascript:void(0)" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Fixed Whatsapp Button -->
+  <a href="https://api.whatsapp.com/send?phone=2348135650706&text=Hello" class="wa-button">
+    <img src="whatsapp-icon.png">
+  </a>
+
+  <!-- Quotes Section -->
+  <div class="quote-bg-container">
+    <img class="quote-bg" src="eagle.jpg">
+    <p class="quote-text">The sky is the limit</p>
+  </div>
+
+  <!-- Page Footer -->
+  <footer class="site-footer" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+    <span style="padding: 1em;">FOOTER1</span>
+    <span style="padding: 1em;">FOOTER2</span>
+    <small style="padding: 1em; color: hsla(0deg, 0%, 100%, 0.6);">powered by CandentDigital</small>
+  </footer>
+
+  <!-------------------- PhotoSwipe UI Element --------------------->
+  <!---------------------------------------------------------------->
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+      <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+        </button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+        </button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!---------------------------------------------------------------->
+  <!-------------------  End PhotoSwipe UI Element ----------------->
+
+
+  <!-------------------------------------------- JAVASCRIPT ---------------------------------------->
+  <script src="jquery-3.5.1.js"></script>
+  <script src="bigcity/js/hero-slider-main.js"></script>          <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+  <script src="mixitup.js"></script>
+  <script src="photoswipe.js"></script>
+  <script src="photoswipe-ui-default.js"></script>
+  
+
+  <!-- MIXITUP GALLERY INITIALIZATION AND functionality -->  
+  <script>
+    
+    let containerEl = document.querySelector('.gallery-grid2');
+    let mixer = mixitup(containerEl);
+    
+    //Change class active for button controls for mixitup gallery
+    //TODO improve this by using stored up references instead of
+    //more DOM queries.
+    let btnGroup = document.querySelector('.button-group')
+    btnGroup.addEventListener('click', (e) => {
+      if(e.target.nodeName === 'BUTTON') {
+          [...e.currentTarget.children].forEach( (item) => {
+              item.classList.remove('active');
+          } );
+          e.target.classList.add('active');
+      } else 
+          return;
+    });
+
+  </script>
+  
+
+  <!-- PHOTOSWIPE INITIALIZATION AND functionality -->
+  <script>
+  var initPhotoSwipeFromDOM = function (gallerySelector) {
+
+    // parse slide data (url, title, size ...) from DOM elements 
+    // (children of gallerySelector)
+    var parseThumbnailElements = function (el) {
+      var thumbElements = el.childNodes;
+        console.log('the childNodes are ', thumbElements);
+        var numNodes = thumbElements.length,
+        items = [],
+        figureEl,
+        linkEl,
+        size,
+        item;
+
+      for (var i = 0; i < numNodes; i++) {
+
+        figureEl = thumbElements[i]; // <figure> element
+
+        // include only element nodes 
+        //&&//&&// NOTE I ADDED THE FIGUREEL.NODENAME PART
+        if (figureEl.nodeType !== 1 || figureEl.nodeName === 'H2') {
+          continue;
+        }
+
+        linkEl = figureEl.children[0]; // <a> element
+
+        size = linkEl.getAttribute('data-size').split('x');
+
+        // create slide object
+        item = {
+          src: linkEl.getAttribute('href'),
+          w: parseInt(size[0], 10),
+          h: parseInt(size[1], 10)
+        };
+
+
+
+        if (figureEl.children.length > 1) {
+          // <figcaption> content
+          item.title = figureEl.children[1].innerHTML;
+        }
+
+        if (linkEl.children.length > 0) {
+          // <img> thumbnail element, retrieving thumbnail url
+          item.msrc = linkEl.children[0].getAttribute('src');
+        }
+
+        item.el = figureEl; // save link to element for getThumbBoundsFn
+        items.push(item);
+      }
+      
+      
+      return items;
+    };
+
+    // find nearest parent element
+    var closest = function closest(el, fn) {
+      return el && (fn(el) ? el : closest(el.parentNode, fn));
+    };
+
+    // triggers when user clicks on thumbnail
+    var onThumbnailsClick = function (e) {
+      e = e || window.event;
+      e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+      var eTarget = e.target || e.srcElement;
+
+      // find root element of slide
+      var clickedListItem = closest(eTarget, function (el) {
+        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+      });
+
+      if (!clickedListItem) {
+        return;
+      }
+
+      // find index of clicked item by looping through all child nodes
+      // alternatively, you may define index via data- attribute
+      var clickedGallery = clickedListItem.parentNode,
+        childNodes = clickedListItem.parentNode.childNodes,
+        numChildNodes = childNodes.length,
+        nodeIndex = 0,
+        index;
+
+
+      for (var i = 0; i < numChildNodes; i++) {
+        if (childNodes[i].nodeType !== 1) {
+          continue;
+        }
+
+        if (childNodes[i] === clickedListItem) {
+          index = nodeIndex;
+          break;
+        }
+        nodeIndex++;
+      }
+
+
+      if (index >= 0) {
+        // open PhotoSwipe if valid index found
+        openPhotoSwipe(index, clickedGallery);
+      }
+      return false;
+    };
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+      var hash = window.location.hash.substring(1),
+        params = {};
+
+      if (hash.length < 5) {
+        return params;
+      }
+
+      var vars = hash.split('&');
+      for (var i = 0; i < vars.length; i++) {
+        if (!vars[i]) {
+          continue;
+        }
+        var pair = vars[i].split('=');
+        if (pair.length < 2) {
+          continue;
+        }
+        params[pair[0]] = pair[1];
+      }
+
+      if (params.gid) {
+        params.gid = parseInt(params.gid, 10);
+      }
+
+      return params;
+    };
+
+    var openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
+      var pswpElement = document.querySelectorAll('.pswp')[0],
+        gallery,
+        options,
+        items;
+
+      items = parseThumbnailElements(galleryElement);
+
+      // define options (if needed)
+      options = {
+
+        // define gallery index (for URL)
+        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+        getThumbBoundsFn: function (index) {
+          // See Options -> getThumbBoundsFn section of documentation for more info
+          var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+            rect = thumbnail.getBoundingClientRect();
+
+          return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+        }
+
+      };
+
+      // PhotoSwipe opened from URL
+      if (fromURL) {
+        if (options.galleryPIDs) {
+          // parse real index when custom PIDs are used 
+          // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+          for (var j = 0; j < items.length; j++) {
+            if (items[j].pid == index) {
+              options.index = j;
+              break;
+            }
+          }
+        } else {
+          // in URL indexes start from 1
+          options.index = parseInt(index, 10) - 1;
+        }
+      } else {
+        options.index = parseInt(index, 10);
+      }
+
+      // exit if index not found
+      if (isNaN(options.index)) {
+        return;
+      }
+
+      if (disableAnimation) {
+        options.showAnimationDuration = 0;
+      }
+
+      // Pass data to PhotoSwipe and initialize it
+      gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+      gallery.init();
+    };
+
+    // loop through all gallery elements and bind events
+    var galleryElements = document.querySelectorAll(gallerySelector);
+
+    for (var i = 0, l = galleryElements.length; i < l; i++) {
+      galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+      galleryElements[i].onclick = onThumbnailsClick;
+    }
+
+    // Parse URL and open gallery if it contains #&pid=3&gid=1
+    var hashData = photoswipeParseHash();
+    if (hashData.pid && hashData.gid) {
+      openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+    }
+  };
+
+  // execute above function
+  initPhotoSwipeFromDOM('.gallery-grid');
+  
+  // me: experimenting
+  // PLEASE REMOVE FIRST GALLERY HEADING H2 ELEMENT FROM WITHIN THE FIRST GALLERY FOR THIS TO WORK PROPERLY!!
+  /*
+  let selectors = document.querySelectorAll('button.selector');
+  let selectedBtn = '';
+  let selectedString = '';
+  let galleries = document.querySelectorAll('.gallery');
+  
+  selectors.forEach((item, index) => {
+    item.addEventListener('click', function(e){
+      //console.log(e.target.getAttribute('data-gallery'));
+      selectedBtn = e.target.getAttribute('data-gallery');
+      selectedString = '.' + selectedBtn;
+      //let notSelectedString = '.gallery' + ':not(' + selectedString + ')';
+      console.log('the gallery selected is ' + selectedString);
+      //console.log('the gallery not selected is ' + notSelectedString);
+      //let hidden = document.querySelectorAll(notSelectedString);
+      //console.log('the hidden gallery or galleries will be ', hidden);
+      //hidden.forEach((item, index) => {item.classList.add('hide')});
+      galleries.forEach((item, index) => {
+        item.classList.add('hide'); 
+        item.classList.remove('show');
+      });
+      document.querySelector(selectedString).classList.add('show');
+      
+      initPhotoSwipeFromDOM(selectedString);
+    });
+  });
+  */
+  </script>
+  
+
+  <!--MY SCRIPTS-->
+  <script>
+
+    /**
+    let menuButton = document.querySelector('.menu-button');
+    let menu = document.querySelector('.container');
+    let menuList = document.querySelector('.main-site-nav');
+    let logo = menuList.querySelector('li:nth-child(3)');
+    console.log(logo);
+    logo.style.display = 'none';
+    menuButton.addEventListener('click', ()=> {
+      menu.classList.toggle('open');
+    });
+    **/
+
+    //JQuery
+    $(function (){
+
+      console.log('Hello world from within jquery');
+      let evenListItems = $('ul:even');
+      console.log(evenListItems);
+
+      /* Display navigation list with sliding motion on 
+      hamburger button click */
+      $(".toggle-button").click(function () {
+        $(".toggle-button").toggleClass("change");
+        $(".nav-list").slideToggle("slow");
+
+        //$(".nav-list").css("visibility", "visible");
+        //$(".nav-list").toggleClass("change");
+
+
+        //$(".nav-list").toggleClass("change");
+        //$(".nav-list").css("transform", "scale(1)");
+      });
+
+      /*
+      $('.nav-list ul').on('click', 'a:not(:last)', function(e){
+        console.log(e.target);
+      })
+      */
+
+      //Event delegation, when a site main nav link is clicked,
+      //remove active class from all child links, add active class to the currently clicked link,
+      //change visual appearance of toggle-button and toggle slide on nav-list
+      $('.nav-list').on('click', 'a', function(e){
+        $('.nav-list a').each(function(){
+          $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+        
+        //If toggle-button is visible, as on smaller screens
+        if($('.toggle-button').css('display') != 'none'){
+          $('.toggle-button').toggleClass('change');
+          $('.nav-list').slideToggle('slow');
+        }
+
+        //console.log(e.target.dataset.name);
+      });
+
+      // Scroll to top  
+      let timer;
+      if ($('#scroll-to-top').length) {
+        let scrollTrigger = 100, // px
+        backToTop = function () {
+          var scrollTop = $(window).scrollTop();
+          if (scrollTop > scrollTrigger) {
+            $('#scroll-to-top').addClass('show');
+            clearTimeout(timer);
+            timer = setTimeout(()=>{
+              $('#scroll-to-top').removeClass('show');
+            }, 2000);
+          } else {
+            $('#scroll-to-top').removeClass('show');
+          }
+        };
+        backToTop();
+        $(window).on('scroll', function () {
+          backToTop();
+        });
+        $('#scroll-to-top').on('click', function (e) {
+          e.preventDefault();
+          $('html,body').animate({
+            scrollTop: 0
+          }, 500);
+        });
+      }
+      
+    });
+
+    //Vanilla Javascript
+    (function (){
+      console.log('Hello world from within vanilla js');
+
+      window.addEventListener('load', (e)=>{
+        //alert('page is loaded');
+        console.log("Hello world from within vanilla js after page is loaded");
+      });
+
+      window.addEventListener('orientationchange', () => {
+        alert('the orientation was changed');
+      });
+
+      //$("document").hide().fadeIn(1500);
+      
+    })();
+
+    //More Vanilla Javascript
+    /*
+    let currTarget = '';
+    let navlist = document.querySelector('.nav-list ul');
+    navlist.addEventListener('click', (e)=>{
+      console.log(e.target);
+      //currTarget = e.currentTarget;
+    });
+    */
+
+  </script>
+  
+</body>

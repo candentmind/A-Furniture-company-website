@@ -40,7 +40,7 @@ Slider
 
 .cd-hero-slider {
   position: relative;
-  overflow: hidden;
+  /*! overflow: hidden; */
 }
 .cd-hero-slider > li {
   position: absolute;
@@ -66,10 +66,6 @@ Slider
 }
 .cd-hero-slider li.move-left {
   /* slide hidden on the left */
-  -webkit-transform: translateX(-100%);
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 .cd-hero-slider li.is-moving, .cd-hero-slider li.selected{
@@ -96,16 +92,11 @@ Single slide style
   padding-top: 100px;
   text-align: center;
   /* Force Hardware Acceleration in WebKit */
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  /*! transform: translateZ(0); */
+  transform: translateZ(0);
 }
 
-.cd-hero-slider h2, .cd-hero-slider p {
+.cd-hero-slider h2:not(.section h2), .cd-hero-slider p:not(.section p) {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
   margin: 0 auto 14px;
@@ -200,7 +191,6 @@ Single slide style
 Single slide animation
 
 -------------------------------- */
-@media only screen and (min-width: 768px) {
   .cd-hero-slider .cd-half-width {
     opacity: 0;
     -webkit-transform: translateX(40px);
@@ -248,26 +238,32 @@ Single slide animation
   }
   .cd-hero-slider .cd-full-width h2,
   .cd-hero-slider .cd-full-width p,
-  .cd-hero-slider .cd-full-width .cd-btn {
+  .cd-hero-slider .cd-full-width .cd-btn,
+  .cd-hero-slider .cd-full-width h5,
+  .cd-hero-slider .cd-full-width span,
+  .cd-hero-slider .cd-full-width i,
+  .cd-hero-slider .cd-full-width h3{
     opacity: 0; 
-    -webkit-transform: translateX(100px);
-    -moz-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    -o-transform: translateX(100px);
     transform: translateX(100px);
   }
   .cd-hero-slider .move-left .cd-full-width h2,
   .cd-hero-slider .move-left .cd-full-width p,
-  .cd-hero-slider .move-left .cd-full-width .cd-btn {
+  .cd-hero-slider .move-left .cd-full-width .cd-btn,
+  .cd-hero-slider .move-left .cd-full-width h5,
+  .cd-hero-slider .move-left .cd-full-width span,
+  .cd-hero-slider .move-left .cd-full-width i,
+  .cd-hero-slider .move-left .cd-full-width h3,
+  .cd-hero-slider .move-left .cd-full-width h4{
     opacity: 0;
-    -webkit-transform: translateX(-100px);
-    -moz-transform: translateX(-100px);
-    -ms-transform: translateX(-100px);
-    -o-transform: translateX(-100px);
     transform: translateX(-100px);
   }
-  .cd-hero-slider .selected .cd-full-width h2,
-  .cd-hero-slider .selected .cd-full-width p,
+ .cd-hero-slider .selected .cd-full-width h2,
+ .cd-hero-slider .selected .cd-full-width p,
+ .cd-hero-slider .selected .cd-full-width span,
+ .cd-hero-slider .selected .cd-full-width h3,
+ .cd-hero-slider .selected .cd-full-width h4,
+ .cd-hero-slider .selected .cd-full-width h5,
+ .cd-hero-slider .selected .cd-full-width i,
   .cd-hero-slider .selected .cd-full-width .cd-btn {
     /* this is the visible slide */
     opacity: 1;
@@ -286,7 +282,9 @@ Single slide animation
     -moz-transition: opacity 0s 0.5s, -moz-transform 0s 0.5s;
     transition: opacity 0s 0.5s, transform 0s 0.5s;
   }
-  .cd-hero-slider li.selected h2 {
+  .cd-hero-slider li.selected h2, .cd-hero-slider li.selected h5,
+  .cd-hero-slider li.selected h3, .cd-hero-slider li.selected span,
+  .cd-hero-slider li.selected i, .cd-hero-slider li.selected h4 {
     -webkit-transition: opacity 0.4s 0.2s, -webkit-transform 0.5s 0.2s;
     -moz-transition: opacity 0.4s 0.2s, -moz-transform 0.5s 0.2s;
     transition: opacity 0.4s 0.2s, transform 0.5s 0.2s;
@@ -301,7 +299,7 @@ Single slide animation
     -moz-transition: opacity 0.4s 0.4s, -moz-transform 0.5s 0.4s, background-color 0.2s 0s;
     transition: opacity 0.4s 0.4s, transform 0.5s 0.4s, background-color 0.2s 0s;
   }
-}
+
 
 /* -------------------------------- 
 
