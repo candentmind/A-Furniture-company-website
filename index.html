@@ -764,23 +764,9 @@
     .contact-section li span a{
       word-break: break-all;
     }
-    
-    /* ===================================================================
-                             CUSTOM FIXES
-    ====================================================================== */
-    @media screen and (max-width: 576px){
-      .my-col-xs-6{
-        float: left !important;
-        max-width: 50%;
-      }
-    }
 
-    .image-body{
-      padding-bottom: unset;
-      padding: 1em 0.5em;
-    }
     /* ===================================================================
-                             END CUSTOM FIXES
+                         SCROLL TO TYPE BUTTON STYLES
     ====================================================================== */
     .dmtop.show {
       bottom: 7px;
@@ -808,6 +794,42 @@
       position: relative;
       top: -0.03em;
     }
+    
+    .site-footer{
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .site-footer span{
+      flex: 50%;
+      padding: 1em;
+    }
+    .site-footer #colophon{
+      flex: 100%;
+      padding: 0.3em;
+      color: hsla(0deg, 0%, 100%, 0.6);
+    }
+
+    /* ===================================================================
+                             CUSTOM FIXES
+    ====================================================================== */
+    @media screen and (max-width: 576px){
+      .my-col-xs-6{
+        float: left !important;
+        max-width: 50%;
+      }
+    }
+
+    .image-body{
+      padding-bottom: unset;
+      padding: 1em 0.5em;
+    }
+    /* ===================================================================
+                             END CUSTOM FIXES
+    ====================================================================== */
+    
   </style>
 
   
@@ -1044,7 +1066,9 @@
                         <div class="flag-wrapper">
                           <span class="flag">Startup and Humble Beginnings</span>
                         </div>
-                        <div class="desc">My current employment. Way better than the position before!</div>
+                        <div class="desc">
+                          <p>My current employment. Way better than the position before!</p>
+                        </div>
                       </div>
                     </li>
 
@@ -1055,10 +1079,10 @@
                           <span class="flag">Award, Accolades and Recognition</span>
                         </div>
                         <div class="desc">
-                          My first employer. All the stuff I've learned and projects I've been working on.
-                          <video controls src="whoiswho-award-interview.mp4">
-
-                          </video>
+                          <p>
+                            My first employer. All the stuff I've learned and projects I've been working on.
+                          </p>
+                          <video controls src="whoiswho-award-interview.mp4"></video>
                         </div>
                       </div>
                       <div class="event-time-wrapper">
@@ -1075,8 +1099,11 @@
                         <div class="flag-wrapper">
                           <span class="flag">Further Growth and Advancement</span>
                         </div>
-                        <div class="desc">A description of all the lectures and courses I have taken and my final
-                          degree?</div>
+                        <div class="desc">
+                          <p>
+                            A description of all the lectures and courses I have taken and my final degree?
+                          </p>
+                        </div>
                       </div>
                     </li>
 
@@ -1350,18 +1377,17 @@
                 <div class="">
                   <li class="d-flex">
                     <i class="fa fa-map-marker p-2 px-4 pt-3" style="font-size: 1.35em;"></i>
-                    <span class="tm-text p-2">Phasellus lacus mi, porta vel sodales nec, faucibus non eros. 
-                    Nulla at quam vel risus laoreet tincidunt in in sem.</span>
+                    <span class="tm-text p-2">No.11 Bandico Plaza, Zaramanganda round-about, Jos, Plateau state.</span>
                   </li>
                   <li class="d-flex">
                     <i class="fa fa-phone p-2 px-4 pt-3" style="font-size: 1.1em;"></i>
-                    <span class="tm-text p-2"><a href="tel:+2348067105873">
-                      Tel: +234 806 7105 873</a></span>
+                    <span class="tm-text p-2"><a href="tel:+2348033514620" style="color: whitesmoke !important;">
+                      Tel: +234 803 3514 620</a></span>
                   </li>
                   <li class="d-flex">
                     <i class="fa fa-envelope p-2 px-4 pt-3"></i>
-                    <span class="tm-text p-2"><a href="javascript:void(0)">
-                      Email: chris@increasefurniture.com.ng</a></span>
+                    <span class="tm-text p-2">
+                      Email: chris@increasefurniture.com.ng</span>
                   </li>
                   <li class="d-flex">
                     <i class="fa fa-clock-o p-2 px-4 pt-3" style="font-size: 1.18em;"></i>
@@ -1414,7 +1440,7 @@
   <a href="javascript:void(0)" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
   <!-- Fixed Whatsapp Button -->
-  <a href="https://api.whatsapp.com/send?phone=2348135650706&text=Hello" class="wa-button">
+  <a href="https://api.whatsapp.com/send?phone=2348033514620&text=Hello Increase Furniture." class="wa-button">
     <img src="whatsapp-icon.png">
   </a>
 
@@ -1425,10 +1451,10 @@
   </div>
 
   <!-- Page Footer -->
-  <footer class="site-footer" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-    <span style="padding: 1em;">FOOTER1</span>
-    <span style="padding: 1em;">FOOTER2</span>
-    <small style="padding: 1em; color: hsla(0deg, 0%, 100%, 0.6);">powered by CandentDigital</small>
+  <footer class="site-footer">
+    <span>FOOTER1</span>
+    <span>FOOTER2</span>
+    <small id="colophon">powered by CandentDigital</small>
   </footer>
 
   <!-------------------- PhotoSwipe UI Element --------------------->
@@ -1860,7 +1886,7 @@
           e.preventDefault();
           $('html,body').animate({
             scrollTop: 0
-          }, 500);
+          }, 600);
         });
       }
       
