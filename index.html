@@ -1401,7 +1401,7 @@
                           <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
                       </div>                                                    
                       <div class="form-group">
-                          <textarea id="contact_message" name="contact_message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+                          <textarea id="contact_message" name="contact_message" class="form-control" rows="4" placeholder="Your message" required></textarea>
                       </div>
                       <button type="submit" class="tm-submit-btn">Send</button>                                                
                   </form> 
@@ -1853,15 +1853,15 @@
       // Scroll to top  
       let timer;
       if ($('#scroll-to-top').length) {
-        let scrollTrigger = 100, // px
+        let scrollThreshold = 100, // px
         backToTop = function () {
           var scrollTop = $(window).scrollTop();
-          if (scrollTop > scrollTrigger) {
+          if (scrollTop > scrollThreshold) {
             $('#scroll-to-top').addClass('show');
             clearTimeout(timer);
             timer = setTimeout(()=>{
               $('#scroll-to-top').removeClass('show');
-            }, 2000);
+            }, 3000);
           } else {
             $('#scroll-to-top').removeClass('show');
           }
