@@ -241,7 +241,7 @@
     overflow: hidden; 
     border-radius: 50%;
     position: fixed; 
-    right: 1%;
+    left: 1%;
     bottom: 0;
     z-index: 2;
   }
@@ -252,44 +252,24 @@
   
   /************* SITE FOOTER ***************/
   .site-footer {
-    color: white;
     background: var(--brand-color-1);
-    padding: 2rem 1rem 0;
-    position: relative;
-    z-index: 1;
+    padding: 1.6rem 1rem 0;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    text-align: center;
+    color: thistle;
   }
-  .quote-bg-container{
-    display: none;
-    position: relative;
-    height: 400px;
-    width: 400px;
-    margin: 0 auto;
-    border: solid 8px var(--brand-color-2);
-    overflow: hidden
+  .site-footer span{
+    padding: 0.8em 0.2em;
   }
-  .quote-bg-container::after{
-    position: absolute;
-    content: ' ';
-    height: 100%;
-    width: 100%;
-    background-color: rgb(34, 30, 134, 0.8);
-    top: 0;
+  .site-footer #colophon{
+    padding: 0.3em;
+    color: hsla(0deg, 0%, 100%, 0.6);
+    text-align: center;
   }
-  .quote-bg{
-    height: 400px;
-    width: 400px;
-    object-fit: cover;
-  }
-  .quote-text{
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
-  }
+  
   
   /* *************************************** MODIFIED ************************************** */
   /* *************************************** RESPONSIVE ************************************** */
