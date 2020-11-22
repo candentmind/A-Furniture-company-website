@@ -1,4 +1,4 @@
-const quotes = [
+[
   {
     "text": "Genius is one percent inspiration and ninety-nine percent perspiration.",
     "author": "Thomas Edison"
@@ -6571,6 +6571,4 @@ const quotes = [
     "text": "Sometimes the cards we are dealt are not always fair. However you must keep smiling and moving on.",
     "author": "Tom Jackson"
   }
-];
-
-//console.log(quotes[Math.trunc(Math.random * quotes.length)]);
+]

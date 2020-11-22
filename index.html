@@ -108,8 +108,6 @@
       border-width: 3px;
       margin: 0 auto;
       margin-top: 1.8em;
-      position: relative;
-      z-index: 2;
       padding: 0.2em;
       font-weight: bold;
       border-radius: 0.4em;
@@ -118,6 +116,9 @@
       padding: 0.2em;
       background-color: var(--brand-color-1);
       display: inline-block;
+    }
+    .demo-gallery .site-nav-button{
+      margin-top: 0.5em;
     }
     .clientele-section .site-nav-button{
       border-color: orangered;
@@ -1258,7 +1259,12 @@
                     <figcaption>This a television console</figcaption>
                   </figure>
                 </div>
-                <img class="ornamental-decorator img-fluid" src="svg-separator2.svg">
+                <p class="cta-text" style="text-align: center;font-family: myLobster;
+                margin-top: 0.6em;margin-bottom: 0;padding: 0 1em;word-spacing: unset;
+                letter-spacing: 0.5px;font-weight: normal;font-size: 1.1em;color: hsla(0, 0%, 96.1%, 0.85);">Do you have a furniture project you want executed
+                  professionally and in a timely fashion? </p>
+                <button class="site-nav-button"><a href="javascript:void(0)">Contact us today</a></button>
+                <hr>
               </section>
               
               <!----------------------------- Other Product Catalog --------------------------->
@@ -1535,6 +1541,7 @@
   <script src="mixitup.js"></script>
   <script src="photoswipe.js"></script>
   <script src="photoswipe-ui-default.js"></script>
+  <script src="quotes.js"></script>
   
 
   <!-- MIXITUP GALLERY INITIALIZATION AND functionality -->  
@@ -1900,10 +1907,6 @@
       window.addEventListener('load', (e)=>{
         //alert('page is loaded');
         console.log("Hello world from within vanilla js after page is loaded");
-      });
-
-      window.addEventListener('orientationchange', () => {
-        alert('the orientation was changed');
       });
 
       //$("document").hide().fadeIn(1500);
