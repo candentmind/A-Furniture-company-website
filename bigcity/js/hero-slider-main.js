@@ -1,191 +1,53 @@
 jQuery(document).ready(function($){
 	var slidesWrapper = $('.cd-hero-slider');
   var sliderNav = $('.nav-list'),
-			//navigationMarker = $('.cd-marker'),
-			slidesNumber = slidesWrapper.children('li').length,
-			visibleSlidePosition = 0,
       activePosition = slidesWrapper.find('li.selected').index(),
-      selectedPosition,
       selectedItem = $('li.selected');
 	
-			console.log('HELLO FROM WITHIN HERO SLIDER');
-			console.log('The slider nav or nav list is ', sliderNav);
-
-
+	let $selectedScroller, $selectedScrollerIndex, $pageScrollers = $('.page-scroll');
 
 	//check if a .cd-hero-slider exists in the DOM 
 	if ( slidesWrapper.length > 0 ) {
-		//var primaryNav = $('.cd-primary-nav'),
+		$pageScrollers.on('click', function(){
+			$selectedScroller = $(this);
+			$selectedScrollerIndex = $selectedScroller.data('index');
 			
-
-		//upload videos (if not on mobile devices)
-		//uploadVideo(slidesWrapper);
-
-		//autoplay slider
-		//setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
-
-		//on mobile - open/close primary navigation clicking/tapping the menu icon
-		//primaryNav.on('click', function(event){
-			//if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
-		//});
-		
-		//change visible slide
-		sliderNav.on('click', 'li', function(event){
-			//event.preventDefault();
-			selectedItem = $(this);
-      
-      //if(selectedItem.hasClass('selected')){
-        //selectedItem.children().attr('href', 'javascript:void(0)');
-      //}
-      
-      //if( selectedItem.children().data('no') === 1 ){
-        //location.href = location.href.slice(0, -1);
-        //console.log('LOCATION HASH IN CLICK');
-      //}
-      
-      
-			if(!selectedItem.hasClass('selected')) {
+			if(!$selectedScroller.hasClass('active')){
 				// if it's not already selected
-        selectedPosition = selectedItem.index();
-        activePosition = slidesWrapper.find('li.selected').index();
-        console.log('the active position is: ', activePosition);
-        let $navList = $('li', sliderNav);
-        console.log('the current target is: ', event.currentTarget);
-        console.log('the target is: ', event.target);
-        
-        
-        
-        /*
-        console.log('selected position is ', selectedPosition);
-        console.log('active position is ', activePosition);
-        */
-        
-        if( activePosition < selectedPosition) {
-        nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
-        } else {
-        prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
-        }
-
-				//this is used for the autoplay
-				//visibleSlidePosition = selectedPosition;
-
-				updateSliderNavigation(sliderNav, selectedPosition);
-				
-				
-				//updateNavigationMarker(navigationMarker, selectedPosition+1);
-				//reset autoplay
-				//setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+				console.log( 'my function, the active page scroller index is', $pageScrollers.filter('.active').data('index') );
+				activePosition = slidesWrapper.find('li.selected').index();
+				if($selectedScrollerIndex > activePosition){
+					nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, $selectedScrollerIndex);
+				}else{
+					prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, $selectedScrollerIndex);
+				}
+	
+				//updateSliderNavigation(sliderNav, $selectedScrollerIndex);
 			}
 		});
+
+		//++++++++++++++++++++++++++++++++++++++++++
+		//                TODO
+		//++++++++++++++++++++++++++++++++++++++++++
+		//If nav-list is currently open, ensure it gets closed after sliding to another page-section 
 	}
-
+	
 	function nextSlide(visibleSlide, container, pagination, n){
-    console.log('tada!');
-		//visibleSlide.removeClass('selected').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			//visibleSlide.removeClass('is-moving');
-      //container.children('li').eq(n).css('display', 'block');
-		//});
-
+		$(window).scrollTop(0);   //Ensure page-section scrolls to the top
     visibleSlide.removeClass('selected');
 		container.children('li').eq(n).addClass('selected').prevAll().addClass('move-left');
-		//checkVideo(visibleSlide, container, n);
-    
 	}
 
 	function prevSlide(visibleSlide, container, pagination, n){
-		//visibleSlide.removeClass('selected').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			//visibleSlide.removeClass('is-moving');
-		//});
-    
     visibleSlide.removeClass('selected')
 		container.children('li').eq(n).addClass('selected').removeClass('move-left').nextAll().removeClass('move-left');
-		//checkVideo(visibleSlide, container, n);
 	}
-
-  
+	
 	function updateSliderNavigation(pagination, n) {
-		var navigationDot = pagination.find('.selected');
-		navigationDot.removeClass('selected');
-		pagination.find('li').eq(n).addClass('selected');
+		var navigationDot = pagination.find('.active');
+		navigationDot.removeClass('active');
+		pagination.find('li').eq(n).addClass('active');
 	}
-  
-
-  /*
-	function setAutoplay(wrapper, length, delay) {
-		if(wrapper.hasClass('autoplay')) {
-			clearInterval(autoPlayId);
-			autoPlayId = window.setInterval(function(){autoplaySlider(length)}, delay);
-		}
-	}
-  */
-
-  /*
-	function autoplaySlider(length) {
-		if( visibleSlidePosition < length - 1) {
-			nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, visibleSlidePosition + 1);
-			visibleSlidePosition +=1;
-		} else {
-			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, 0);
-			visibleSlidePosition = 0;
-		}
-		//updateNavigationMarker(navigationMarker, visibleSlidePosition+1);
-		//updateSliderNavigation(sliderNav, visibleSlidePosition);
-	}
-  */
-
-  /*
-	function uploadVideo(container) {
-		var i = 0;
-		container.find('.cd-bg-video-wrapper').each(function(){
-			var videoWrapper = $(this);
-			if( videoWrapper.is(':visible') ) {
-				// if visible - we are not on a mobile device 
-				var	videoUrl = videoWrapper.data('video'),
-					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /></video>');
-				
-				if(i == 0) {
-					video = $('<video autoplay loop><source src="'+videoUrl+'.mp4" type="video/mp4" /></video>');
-				}
-
-				video.appendTo(videoWrapper);
-
-				// play video if first slide
-				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
-
-				i++;
-			}
-		});
-	}
-  */
-
-  /*
-	function checkVideo(hiddenSlide, container, n) {
-		//check if a video outside the viewport is playing - if yes, pause it
-		var hiddenVideo = hiddenSlide.find('video');
-		if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
-
-		//check if the select slide contains a video element - if yes, play the video
-		var visibleVideo = container.children('li').eq(n).find('video');
-		if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
-	}
-  */
-
-	//function updateNavigationMarker(marker, n) {
-		//marker.removeClassPrefix('item').addClass('item-'+n);
-	//}
-
-  /*
-	$.fn.removeClassPrefix = function(prefix) {
-		//remove all classes starting with 'prefix'
-	    this.each(function(i, el) {
-	        var classes = el.className.split(" ").filter(function(c) {
-	            return c.lastIndexOf(prefix, 0) !== 0;
-	        });
-	        el.className = $.trim(classes.join(" "));
-	    });
-	    return this;
-	};
-  */
   
   window.addEventListener('hashchange', function(e){
     console.log('The selected link data number is ', selectedItem.children().data('no'));

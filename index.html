@@ -848,10 +848,10 @@
       <!-- Navigation List -->
       <nav class="nav-list">
         <ul class=''>
-          <li class=""><a href="javascript:void(0)" class="nav-list-link active" data-name="home">Home</a></li>
-          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="about">About</a></li>
-          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="projects">Projects</a></li>
-          <li class=""><a href="javascript:void(0)" class="nav-list-link" data-name="contact">Contact</a></li>
+          <li class=""><a href="javascript:void(0)" class="page-scroll nav-list-link active" data-index="0" data-name="home">Home</a></li>
+          <li class=""><a href="javascript:void(0)" class="page-scroll nav-list-link" data-index="1" data-name="about">About</a></li>
+          <li class=""><a href="javascript:void(0)" class="page-scroll nav-list-link" data-index="2" data-name="projects">Projects</a></li>
+          <li class=""><a href="javascript:void(0)" class="page-scroll nav-list-link" data-index="3" data-name="contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -889,7 +889,7 @@
                         Pellentesque augue urna, ultrices sit amet luctus eget, ultricies sit amet ipsum. Nulla sem
                         nisi, commodo sed auctor sed, euismod nec dui. Morbi vitae enim id massa sodales tincidunt a et
                         mi.</p>
-                      <button class="site-nav-button"><a href="javascript:void(0)">Learn more about us</a></button>
+                      <button class="site-nav-button"><a class="page-scroll" href="javascript:void(0)" data-index="1">Learn more about us</a></button>
                     </div>
                     <img class="ornamental-decorator img-fluid" src="svg-separator2.svg">
 
@@ -1111,7 +1111,7 @@
               <figure class="col-6 col-sm-3"><img src="diamond-bank-logo.png" style="transform:scale(1);" alt=""></figure>
             </div>
 
-            <button class="site-nav-button"><a href="javascript:void(0)">Explore some of our projects</a></button>
+            <button class="site-nav-button"><a class="page-scroll" href="javascript:void(0)" data-index="2">Explore some of our projects</a></button>
           </section>
 
           <!--------------------------- WHY US SECTION TEST --------------------------->
@@ -1249,7 +1249,7 @@
                 margin-top: 0.6em;margin-bottom: 0;padding: 0 1em;word-spacing: unset;
                 letter-spacing: 0.5px;font-weight: normal;font-size: 1.1em;color: hsla(0, 0%, 96.1%, 0.85);">Do you have a furniture project you want executed
                   professionally and in a timely fashion? </p>
-                <button class="site-nav-button"><a href="javascript:void(0)">Contact us today</a></button>
+                <button class="site-nav-button"><a class="page-scroll" href="javascript:void(0)" data-index="3">Contact us today</a></button>
                 <hr>
               </section>
               
@@ -1817,40 +1817,47 @@
       $(".toggle-button").click(function () {
         $(".toggle-button").toggleClass("change");
         $(".nav-list").slideToggle("slow");
-
-        //$(".nav-list").css("visibility", "visible");
-        //$(".nav-list").toggleClass("change");
-
-
-        //$(".nav-list").toggleClass("change");
-        //$(".nav-list").css("transform", "scale(1)");
       });
 
-      /*
-      $('.nav-list ul').on('click', 'a:not(:last)', function(e){
-        console.log(e.target);
-      })
-      */
+      /* Controls page behavior when scrolling 
+      from one page-section to another */
+      $('.page-scroll').on('click', function(e){
 
-      //Event delegation, when a site main nav link is clicked,
-      //remove active class from all child links, add active class to the currently clicked link,
-      //change visual appearance of toggle-button and toggle slide on nav-list
-      $('.nav-list').on('click', 'a', function(e){
-        $('.nav-list a').each(function(){
+        let $clickedScroller = $(this);
+
+        $('.page-scroll').each(function(){
           $(this).removeClass('active');
         });
-        $(this).addClass('active');
-        
-        //If toggle-button is visible, as on smaller screens
-        if($('.toggle-button').css('display') != 'none'){
-          $('.toggle-button').toggleClass('change');
-          $('.nav-list').slideToggle('slow');
-        }
 
-        //console.log(e.target.dataset.name);
+        //If the 'page-scroller' is a nav-list-link within the navlist
+        //of the site's masthead, then simply add class active to it
+        //and then ensure the toggle button (hamburger menu) changes 
+        //visually and the navlist slides when this particular 
+        //'page-scroller' is clicked.
+        if( $clickedScroller.hasClass('nav-list-link') ){
+          $clickedScroller.addClass('active');
+
+          //If toggle-button is visible, as on smaller screens
+          if($('.toggle-button').css('display') !== 'none'){
+            $('.toggle-button').toggleClass('change');
+            $('.nav-list').slideToggle('slow');
+          }
+        }
+        else{
+          //Look for a matching nav-list-link and simply add class active
+          //to it, so that the site's nav-list-links within masthead
+          //reflects the true page state with the currently
+          //active nav-list-link highlighted.
+          $('.nav-list a').each(function(){
+            if( $(this).data('index') === $clickedScroller.data('index') ){
+              $(this).addClass('active');
+              return;
+            }
+          });
+        }
       });
 
-      // Scroll to top  
+      //Scroll to top  
       let timer;
       if ($('#scroll-to-top').length) {
         let scrollThreshold = 100, // px
