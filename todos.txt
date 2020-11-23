@@ -1,36 +1,42 @@
+- RC Number    
 - Form validation
-- Resize background images    DONE
+- Make logo image a link
+- Remove embedded iframe google map and use a linked image instead
+  that leads to the google map page externally
+- Fill up the alt attribute for all images with descriptive 
+  texts
+- Minify scripts and stylesheets and use minified libraries
 - Remove class .active from nav-links (<a> elements) and replace instead with 
   a descendant selector using the .selected class to pinpoint the selected link
   on the nav
-- Change title from Experimentation to something apt    DONE
-- Include page loader
-- Favicon image
-- RC Number
-- Remove orientation change event listener
+- Location object and hashchange event manipulations
+- Intersection observer usage
+- Opening hours
 - Use @import for getting assets
 - Reduce brightness/harshness of white color
 - Implement counter up for achievements
 - Change about us image
-- Remove padding from video section   DONE
-- Add daily quotes to footer section    DONE
-- Include scroll to top button at lower-end of viewport    DONE
-- Intersection observer usage
-- Opening hours
+- Include copyright and date in footer section of the page
 - Write html using well structured semantic tags
   such as nav, main and footer and optimize for Search engines.
   Also consider using the 'order' property to shift certain elements
   in the source file as an SEO measure, giving priority to more
   important/very-relevant blocks first before considering others.
 - Reduce images sizes with tinypng    
-- Fill up the alt attribute for all images with descriptive 
-  texts
-- Minify scripts and stylesheets and use minified libraries
+- Include page loader    DONE
+- Favicon image     DONE
+- Resize background images    DONE
+- Change title from Experimentation to something apt    DONE
+- Remove orientation change event listener   DONE
+- Remove padding from video section   DONE
+- Add daily quotes to footer section    DONE
+- Include scroll to top button at lower-end of viewport    DONE
 - Include daily quotes from brainyquotes in footer section    DONE
-- Default whatsapp message for whatsapp button cta
+- Default whatsapp message for whatsapp button cta    DONE
 - Include poster for interview video
 - Search for css creative text animation on genyt.net
 - Reorder about page so that 'clients we have worked with'
   precedes the 'why choose us' section    DONE
-- Still make the whatsapp and backToTop buttons smaller
+- Still make the whatsapp and backToTop buttons smaller for
+  smaller screens
 - Copy shake animation from nedusinteriors.com for footer section

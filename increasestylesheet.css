@@ -269,6 +269,11 @@
     color: hsla(0deg, 0%, 100%, 0.6);
     text-align: center;
   }
+  .site-footer hr{
+    flex: 100%;
+    background: grey;
+    margin: 0.5em 0 0 0;
+  }
   
   
   /* *************************************** MODIFIED ************************************** */
