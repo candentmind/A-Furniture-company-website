@@ -1,6 +1,7 @@
 - RC Number    
 - Form validation
 - Make logo image a link
+- Use other fonts
 - Remove embedded iframe google map and use a linked image instead
   that leads to the google map page externally
 - Fill up the alt attribute for all images with descriptive 
@@ -16,6 +17,8 @@
 - Reduce brightness/harshness of white color
 - Implement counter up for achievements
 - Change about us image
+- Include poster for interview video
+- Search for css creative text animation on genyt.nets
 - Include copyright and date in footer section of the page
 - Write html using well structured semantic tags
   such as nav, main and footer and optimize for Search engines.
@@ -33,8 +36,6 @@
 - Include scroll to top button at lower-end of viewport    DONE
 - Include daily quotes from brainyquotes in footer section    DONE
 - Default whatsapp message for whatsapp button cta    DONE
-- Include poster for interview video
-- Search for css creative text animation on genyt.net
 - Reorder about page so that 'clients we have worked with'
   precedes the 'why choose us' section    DONE
 - Still make the whatsapp and backToTop buttons smaller for

@@ -253,18 +253,16 @@
   /************* SITE FOOTER ***************/
   .site-footer {
     background: var(--brand-color-1);
-    padding: 1.6rem 1rem 0;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    flex-wrap: wrap;
-    text-align: center;
+    padding: 1.8rem 1rem 0;
     color: thistle;
+    color: hsl(300deg 0% 70%);
+    line-height: 1.3em;
   }
-  .site-footer span{
-    padding: 0.8em 0.2em;
+  .site-footer h5{
+    color: hsla(0deg, 0%, 100%, 0.75);
   }
   .site-footer #colophon{
+    display: block;
     padding: 0.3em;
     color: hsla(0deg, 0%, 100%, 0.6);
     text-align: center;
@@ -274,7 +272,29 @@
     background: grey;
     margin: 0.5em 0 0 0;
   }
-  
+  .site-footer a{
+    color: hsl(300deg 0% 70%);
+  }
+  .site-footer p{
+    margin-bottom: 0.3em;
+  }
+  .site-footer .contact_info li{
+    display: block;
+    padding-top: 0.5em;
+  }
+  .site-footer .contact_info li span{
+    display: table-cell;
+    padding-left: 1em;
+  }
+  .site-footer .contact_info li i{
+    display: table-cell;
+    width: 1.3em;
+    font-size: 1.1em;
+    vertical-align: top;
+  }
+  .site-footer [class *= 'footer' i]{
+    margin-bottom: 1em;
+  }
   
   /* *************************************** MODIFIED ************************************** */
   /* *************************************** RESPONSIVE ************************************** */

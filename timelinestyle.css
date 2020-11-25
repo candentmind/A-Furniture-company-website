@@ -37,6 +37,10 @@
   transform: translateX(-50%);
 }
 
+.timeline-section .subsection-header::before{
+  content: unset;
+}
+
 .timeline li {
   display: flex;
   padding: 0.9em 0;

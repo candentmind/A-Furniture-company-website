@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="photoswipe.css">
   <link rel="stylesheet" href="default-skin/default-skin.css">
 
+  <!--====== Line Icons css ======-->
+  <link rel="stylesheet" href="LineIcons.css">
+
   <!-- fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
   <link rel="stylesheet" href="fonts/font-awesome.min.css">
@@ -50,12 +53,11 @@
       position: absolute;
       content: '';
       height: 2.6px;
-      width: 20%;
-      bottom: 0;
-      background-color: navy;
-      bottom: -0.8em;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
+      width: 12%;
+      background: whitesmoke;
     }
 
     .ornamental-decorator {
@@ -66,7 +68,7 @@
     }
     .demo-gallery .ornamental-decorator{
       height: 5.0em;
-      width: 60%;
+      width: 55%;
     }
 
     @media screen and (min-width: 460px) {
@@ -75,7 +77,7 @@
       }
       .demo-gallery .ornamental-decorator{
         height: 5.0em;
-        width: 50%;
+        width: 45%;
       }
     }
     @media screen and (min-width: 768px) {
@@ -86,7 +88,7 @@
       }
       .demo-gallery .ornamental-decorator{
         height: 4.0em;
-        width: 38%;
+        width: 36%;
       }
     }
     @media screen and (min-width: 992px) {
@@ -97,7 +99,7 @@
       }
       .demo-gallery .ornamental-decorator{
         height: 4.0em;
-        width: 28%;
+        width: 26%;
       }
     }
 
@@ -122,11 +124,11 @@
     }
     .clientele-section .site-nav-button{
       border-color: orangered;
-      background: ivory;
+      background: whitesmoke;
     }
     .clientele-section .site-nav-button a{
       color: var(--brand-color-1);
-      background: ivory;
+      background: whitesmoke;
     }
 
     /* ===================================================================
@@ -441,6 +443,9 @@
 	  .why-us-section-title p{
       font-size: 14px;
     }
+    .why-us-section .subsection-header::before{
+      content: unset;
+    }
     .why-us-points{
       background: #ffffff;
       margin-bottom: 0;
@@ -728,6 +733,7 @@
       color: var(--shade-1);
       padding: 1em 1em;
       color: whitesmoke;
+      font-size: 0.9em;
     }
     @media screen and (max-width: 768px){
       .contact-section iframe{
@@ -815,7 +821,6 @@
     ====================================================================== */
     
   </style>
-
   
 </head>
 
@@ -824,6 +829,13 @@
 <!----------------------------------------------------------------------------------------------------->
 
 <body class="the-body">
+  <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
+  <div id="loader-wrapper">            
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
   <!-- BACKGROUND IMAGE ELEMENT -->
   <div class="page-bg"></div>
   <div class="page-bg2"></div>
@@ -1362,24 +1374,24 @@
           <section class="contact-section">
             <div class="row">
               <!----------------------------- Contact Details --------------------------->
-              <section class="col-lg-6">
+              <section class="col-lg-6 contact-details">
                 <div class="">
-                  <li class="d-flex">
-                    <i class="fa fa-map-marker p-2 px-4 pt-3" style="font-size: 1.35em;"></i>
+                  <li class="">
+                    <i class="fa fa-map-marker p-2 px-3 pt-3" style="font-size: 1.35em;"></i>
                     <span class="tm-text p-2">No.11 Bandico Plaza, Zaramanganda round-about, Jos, Plateau state.</span>
                   </li>
-                  <li class="d-flex">
-                    <i class="fa fa-phone p-2 px-4 pt-3" style="font-size: 1.1em;"></i>
+                  <li class="">
+                    <i class="fa fa-phone p-2 px-3 pt-3" style="font-size: 1.1em;"></i>
                     <span class="tm-text p-2"><a href="tel:+2348033514620" style="color: whitesmoke !important;">
                       Tel: +234 803 3514 620</a></span>
                   </li>
-                  <li class="d-flex">
-                    <i class="fa fa-envelope p-2 px-4 pt-3"></i>
+                  <li class="">
+                    <i class="fa fa-envelope p-2 px-3 pt-3"></i>
                     <span class="tm-text p-2">
                       Email: chris@increasefurniture.com.ng</span>
                   </li>
-                  <li class="d-flex">
-                    <i class="fa fa-clock-o p-2 px-4 pt-3" style="font-size: 1.18em;"></i>
+                  <li class="">
+                    <i class="fa fa-clock-o p-2 px-3 pt-3" style="font-size: 1.18em;"></i>
                     <span class="tm-text p-2">Opening Hours:
                       <br>
                       Mon - Sat (8:30 am - 6:00pm)
@@ -1432,25 +1444,53 @@
   <a href="https://api.whatsapp.com/send?phone=2348033514620&text=Hello Increase Furniture." class="wa-button">
     <img src="whatsapp-icon.png">
   </a>
+  
 
   <!-- Page Footer -->
   <footer class="site-footer">
-    <span class="col-sm-4 col-12">FOOTER1</span>
-    <span class="col-sm-4 col-12">FOOTER1</span>
-    <span class="col-sm-4 col-12">
-      <div class="textwidget"><script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-      <small><i><a href="/quote_of_the_day" target="_blank" rel="nofollow noopener noreferrer">more Quotes</a></i></small></div>
-    </span>
+    <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-4">
+                    <div class="single-footer-widget footer_1">
+                        <h5>About</h5>
+                        <p>Increase Furniture Nigeria limited is your best friend in furniture matters. We are a
+                        household name, delivering quality to all our clients.</p>
+                        <div class="social_icon">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-dribbble"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="single-footer-widget footer_2">
+                        <h5>Contact</h5>
+                        <div class="contact_info">
+                            <li><i class="fa fa-map-marker"></i><span>Hath of it fly signs
+                                bear be one blessed after</span></li>
+                            <li><i i class="fa fa-phone"></i><span>+2 36 265 (8060)</span></li>
+                            <li><i i class="fa fa-envelope"></i><span>info@colorlib.com</span></li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="single-footer-widget footer_3">
+                        <h5>Get Inspired</h5>
+                        <div class="textwidget"><script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                        <p>You must know that you are a success, you are resourceful and never a waste product</p>
+                        <small><i><a href="/quote_of_the_day" target="_blank" rel="nofollow noopener noreferrer">more Quotes</a></i></small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-sm-4 col-12">
+      
+    </div>
     <hr>
     <small class="col-12" id="colophon">powered by CandentDigital</small>
   </footer>
-
-  <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
-  <div id="loader-wrapper">            
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
 
   <!-------------------- PhotoSwipe UI Element --------------------->
   <!---------------------------------------------------------------->
@@ -1821,9 +1861,10 @@
 
       // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
       function hidePreloader() {
+        //$('body').addClass('loaded');
         setTimeout(function() {
           $('body').addClass('loaded');
-        }, 650);
+        }, 800);
       }
       hidePreloader();
 
@@ -1834,7 +1875,7 @@
         $(".nav-list").slideToggle("slow");
       });
 
-      /* Controls page behavior when scrolling 
+      /* Controls page behavior when navigating 
       from one page-section to another */
       $('.page-scroll').on('click', function(e){
 
