@@ -1,9 +1,8 @@
+- Add a loading image to the iframe section of the google map
 - RC Number    
-- Form validation
+- Form validation and netlify form
 - Make logo image a link
 - Use other fonts
-- Remove embedded iframe google map and use a linked image instead
-  that leads to the google map page externally
 - Fill up the alt attribute for all images with descriptive 
   texts
 - Minify scripts and stylesheets and use minified libraries
