@@ -121,7 +121,7 @@
    }
   .firm-logo{
     border-radius: 50%;
-    max-width: 100%;
+    max-width: 100%
     display: block;
     margin: 0 auto;
     border: solid var(--brand-color-1) 3.8px;

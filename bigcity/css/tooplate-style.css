@@ -353,24 +353,25 @@ textarea { height: 168px; }
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   #loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000; }
-   #loader { display: block; position: relative; left: 50%; top: 50%; width: 160px; height: 160px; margin: -75px 0 0 -75px; border-radius: 50%; border: 3px solid transparent; border-top-color: #3498db; /* Chrome, Opera 15+, Safari 5+ */
-   	animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */ z-index: 2001; }
-   #loader:before { content: ""; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 3px solid transparent;
-   	border-top-color: var(--brand-color-1-1); /* Chrome, Opera 15+, Safari 5+ */
+   #loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; /*height: 100%;*/ bottom: -10%; z-index: 2000; }
+   #loader { display: block; position: relative; left: 55%; top: 43%; width: 7.2em; /*height: 160px;*/ margin: -75px 0 0 -75px; border-radius: 50%; border: 3px solid transparent; /*border-top-color: #3498db;*/ /* Chrome, Opera 15+, Safari 5+ */
+   	/*animation: spin 2s linear infinite;*/ animation: pulsate 3s linear forwards;/* Chrome, Firefox 16+, IE 10+, Opera */ z-index: 2001; }
+   #loader:before { content: ""; position: absolute; top: -6px; left: -6px; right: -6px; bottom: -6px; border-radius: 50%; border: 3px solid transparent;
+   	border-top-color: var(--brand-color-1-1); border-right-color: var(--brand-color-1-1); /* Chrome, Opera 15+, Safari 5+ */
    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */ }
-   #loader:after { content: ""; position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px; border-radius: 50%; border: 3px solid transparent;
-border-top-color: white; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */ }
+   #loader:after { content: ""; position: absolute; top: -12px; left: -12px; right: -12px; bottom: -12px; border-radius: 50%; border: 3px solid transparent;
+/*border-top-color: white;*/ border-right-color: white; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */ }
 @keyframes spin {
-	0%   {  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */
-		transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-	}
-	100% {  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */
-		transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-	}
+	0% { transform: rotate(0deg); }
+	100%{ transform: rotate(360deg); }
 }
 
-#loader-wrapper .loader-section { position: fixed; top: 0; width: 51%; height: 100%; background: hsl(242.3, 63.4%, 32.2%); z-index: 2000;  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */ transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */}
+@keyframes pulsate{
+	0%{ transform: scale(0.85) }
+	100%{ transform: scale(1.2) }
+}
+
+#loader-wrapper .loader-section { position: fixed; top: 0; width: 51%; /*height: 100%;*/ bottom: -10%; background: hsl(242.3, 63.4%, 32.2%); z-index: 2000;  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */ transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */}
 #loader-wrapper .loader-section.section-left { left: 0; }
 #loader-wrapper .loader-section.section-right { right: 0; }
 
@@ -393,6 +394,7 @@ border-top-color: white; /* Chrome, Opera 15+, Safari 5+ */ animation: spin 1.5s
 	visibility: hidden;  /* Chrome, Opera 15+, Safari 3.1+ */  /* IE 9 */
 	transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */  
 	transition: all 0.3s 1s ease-out;
+	border-collapse: ;
 }
 
 /* JavaScript Turned Off */
