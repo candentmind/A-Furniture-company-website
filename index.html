@@ -1878,8 +1878,10 @@
         $(".nav-list").slideToggle("slow");
       });
 
-      /* Controls page behavior when navigating 
-      from one page-section to another */
+      /* 
+        Controls the 'navigation state' as the user
+        navigates from one page-section to another.
+      */
       $('.page-scroll').on('click', function(e){
 
         let $clickedScroller = $(this);

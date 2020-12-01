@@ -14,7 +14,8 @@ jQuery(document).ready(function($){
 			
 			if(!$selectedScroller.hasClass('active')){
 				// if it's not already selected
-				console.log( 'my function, the active page scroller index is', $pageScrollers.filter('.active').data('index') );
+				
+        console.log( 'my function, the active page scroller index is', $pageScrollers.filter('.active').data('index') );
 				activePosition = slidesWrapper.find('li.selected').index();
 				if($selectedScrollerIndex > activePosition){
 					nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, $selectedScrollerIndex);
@@ -30,6 +31,7 @@ jQuery(document).ready(function($){
 		//                TODO
 		//++++++++++++++++++++++++++++++++++++++++++
 		//If nav-list is currently open, ensure it gets closed after sliding to another page-section 
+    //In other-words
 	}
 	
 	function nextSlide(visibleSlide, container, pagination, n){
