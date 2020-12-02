@@ -279,14 +279,17 @@
   }
   .site-footer p{
     margin-bottom: 0.3em;
+    font-size: 0.9em;
   }
   .site-footer .contact_info li{
     display: block;
     padding-top: 0.5em;
+    
   }
   .site-footer .contact_info li span{
     display: table-cell;
     padding-left: 0.8em;
+    font-size: 0.9em;
   }
   .site-footer .contact_info li i{
     display: table-cell;
