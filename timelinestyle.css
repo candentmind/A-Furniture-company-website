@@ -54,6 +54,15 @@
   margin-top: 1em;
 }
 
+.timeline li:first-child .desc, .timeline li:last-child .desc{
+  border-bottom-left-radius: 0.9em;
+  border-bottom-right-radius: 0.9em;
+}
+
+.timeline li:first-child .desc p, .timeline li:last-child .desc p{
+  padding: 0.5em;
+}
+
 .event-content-parent{
   position: relative;
   padding: 0 0.4em;

@@ -47,17 +47,19 @@
     }
 
     .subsection-header{
-      position: relative;
       font-size: 1.45rem;
     }
-    .subsection-header::before{
+    .subsection-header-lined{
+      position: relative;
+    }
+    .subsection-header-lined::before{
       position: absolute;
       content: '';
       height: 2.6px;
       bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
-      width: 12%;
+      width: 15%;
       background: whitesmoke;
     }
 
@@ -207,7 +209,7 @@
     .about-intro-pic {
       position: relative;
       /*padding: 1.5em;*/
-      margin-top: 3em;
+      margin-top: 1.6em;
     }
     .about-intro-pic-wrap {
       box-shadow: -6px 6px aliceblue;
@@ -308,17 +310,6 @@
       text-align: center;
       margin-bottom: 1em;
     }
-    .services-section .subsection-header::after {
-      content: "";
-      position: absolute;
-      width: 12%;
-      height: 4px;
-      background: white;
-      height: 2px;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
     .services-gallery {
       flex-basis: 50%;
       padding: 2.5em 1em 0em 1em;
@@ -415,27 +406,17 @@
       transform: translate(6%, 18%);
     }
     /* ===================================================================
-                                SERVICES SECTION
+                            END SERVICES SECTION
     ====================================================================== */
-
-    .page-divider {
-      position: relative;
-    }
-
-    .page-divider:last-child {
-      display: none;
-    }
 
     
     /* ===================================================================
                     BORROWED STYLES FOR TESTING WHY US SECTION
     ====================================================================== */
     .why-us-section{
-	  padding: 1.5em 1em;
-      background-color: var(--brand-color-1);
+      padding: 1.5em 1em;
       margin-top: 0.4em;
       border-radius: 0.5em;
-      background: #1b46ac;
       background-color: var(--brand-color-1);
 	  }  
     .why-us-section-title h3{
@@ -444,8 +425,8 @@
 	  .why-us-section-title p{
       font-size: 14px;
     }
-    .why-us-section .subsection-header::before{
-      content: unset;
+    .why-us-section .subsection-header-lined::before{
+      
     }
     .why-us-points{
       background: #ffffff;
@@ -461,33 +442,13 @@
 	  border-top: orange solid;
     }
     .why-us-points h2{
+      font-size: 1.1em;
       position: relative;
       margin-bottom: 1em;
+      font-weight: 600;
+      margin-top: 20px;
     }
-    .why-us-points h2::before {
-      position: absolute;
-      content: "";
-      height: 2.6px;
-      width: 20%;
-      bottom: 0;
-      background: white;
-      bottom: -0.8em;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-	/*
-    .why-us-points::before{
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 80%;
-      background-color: transparent;
-      top: 0;
-      border-top: 4px solid orangered;
-      left: 0;
-      border-radius: 4em 0;
-    }
-	*/
+  
     .section-title{
       color: white;
       margin-bottom: 1em;
@@ -508,11 +469,6 @@
       width: 4em;
       height: 4em;
     }
-    .why-us-points h2{
-      font-size: 22px;
-      font-weight: 600;
-      margin-top: 20px;
-    }
 
     .clientele-section{
       background-color: var(--shade-1);
@@ -520,18 +476,11 @@
       padding: 0.8em 1.3em;
       margin: 0.3em 0;
     }
-    .clientele-section .subsection-header{
+    .clientele-section .subsection-header-lined{
       font-size: 1.3em;
     }
-    .clientele-section .subsection-header::before{
-      position: absolute;
-      content: "";
-      height: 2.6px;
-      width: 12%;
-      background: navy;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
+    .clientele-section .subsection-header-lined::before{
+      background: var(--brand-color-1);
     }
     .clientele-section .row{
       justify-content: center;
@@ -551,15 +500,6 @@
     /* ===================================================================
                   PROJECTS/PRODUCTS CATALOG GALLERY SECTION
     ====================================================================== */
-    .image-grid-cell{
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    @media screen and (max-width: 992px){
-      .demo-gallery > section:last-child .image-grid-cell:last-child{
-        /*display: none;*/
-      }
-    }
     .gallery-grid{
       display: flex;
       text-align: center;
@@ -680,10 +620,10 @@
     }
     
 
-    /* 
+    /*********************************************** 
        Rulesets for buttons used for selecting
        different categories of catalog images   
-    */
+    ************************************************/
     .hvr-rectangle-out {
       display: inline-block;
       vertical-align: middle;
@@ -725,6 +665,10 @@
     /* 
       End buttons rulesets   
     */
+    /* ===================================================================
+               END PROJECTS/PRODUCTS CATALOG GALLERY SECTION
+    ====================================================================== */
+    
     
     /* ===================================================================
                            CONTACT SECTION
@@ -770,6 +714,36 @@
     }
     .contact-section li span a{
       word-break: break-all;
+    }
+    #g-map-frame-loader-wrapper{
+      position: relative;
+    }
+    #g-map-frame-loader-wrapper::before{
+      content: "";
+      position: absolute;
+      background: #2f2b93;
+      width: 100%;
+      height: 100%;
+      
+    }
+    #g-map-frame-loader-wrapper.frame-loaded #loader{
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+    #g-map-frame-loader-wrapper.frame-loaded::before{
+      opacity: 0;
+      transition: all 1s;
+    }
+    #loader{
+      display: block;
+      position: absolute;
+      left: 50%; top: 50%;
+      width: 8em; height: 8em;
+      margin: -4em 0 0 -4em;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: #3498db;
+      animation: spin 2s linear infinite;
     }
 
     /* ===================================================================
@@ -849,7 +823,7 @@
     <div class="inner-wrapper container">
       <!-- Company Logo -->
       <div class="logo-wrapper">
-        <a href="javascript:void(0)" class="page-scroll" data-index="0"><img class="firm-logo" src="increase-logo.jpg"></a>
+        <a href="javascript:void(0)" class="page-scroll" data-index="0"><img class="firm-logo" src="company-logo.jpg"></a>
       </div>
 
       <!-- Hamburger Button -->
@@ -903,10 +877,10 @@
                       </p>
                       <p class="tm-text tm-home-description">
                         We have a vast wealth of experience from various projects we 
-                        have managed and executed. We also have a team of competent
+                        have managed and executed and a team of competent
                         professionals who can work with anyone to bring their ideas
-                        to a tangible reality. We can create whatever bespoke designs you have in mind,
-                        we also revamp and refurbish and refurnish old furnitures.
+                        to a tangible reality. We can create whatever bespoke designs you have in mind.
+                        We also retouch, repair, revamp, refurbish and refurnish old furnitures.
                       </p>
                       <button class="site-nav-button"><a class="page-scroll" href="javascript:void(0)" data-index="1">Learn more about us</a></button>
                     </div>
@@ -955,23 +929,29 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="about-intro">
-                  <h3>ABOUT BRIEF</h3>
+                  <h3 class="subsection-header">ABOUT BRIEF</h3>
                   <p>
                     In this section we are going to talk very briefly about the company, its location and how it is
                     specially
                     positioned to meet the design specifications of its clients with quality service delivery.
                   </p>
                   <div class="row">
-                    <div class="col-md-4 col-sm-6 col-12">
+                    <div class="col-md-4 col-sm-4 col-12">
                       <div class="about-stats">
-                        <h4><span class="counter">8</span><span> + </span></h4>
-                        <p>Experience Years</p>
+                        <h4><span class="counter">10</span><span> + </span></h4>
+                        <p>Years of Experience</p>
                       </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-12">
+                    <div class="col-md-4 col-sm-4 col-12">
                       <div class="about-stats">
-                        <h4><span class="counter">19</span><span> + </span></h4>
-                        <p>Experience Years</p>
+                        <h4><span class="counter">150</span><span> + </span></h4>
+                        <p>Projects Executed</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-12">
+                      <div class="about-stats">
+                        <h4><span class="counter">260</span><span> + </span></h4>
+                        <p>Satisfied Customers</p>
                       </div>
                     </div>
                   </div>
@@ -1021,8 +1001,7 @@
           <!-----------------------------------  PRODUCTS & SERVICES SECTION ----------------------------->
           <section class="services-section">
             <div class="row">
-              <h3 class="subsection-header">Products and Services</h3>
-              <hr>
+              <h3 class="subsection-header subsection-header-lined">Products and Services</h3>
               <div class="services-main">
                 <ul class="services-list">
                   <li>Home & Bank Furniture</li>
@@ -1080,13 +1059,13 @@
                     <li class="timeline-item">
                       <div class="event-content-parent">
                         <div class="flag-wrapper">
-                          <span class="flag">Award, Accolades and Recognition</span>
+                          <span class="flag">Accolades, Award and Recognition</span>
                         </div>
                         <div class="desc">
                           <p>
                             My first employer. All the stuff I've learned and projects I've been working on.
                           </p>
-                          <video controls src="whoiswho-award-interview.mp4"></video>
+                          <video controls src="whoiswho-award-interview.mp4" alt="interview-video" poster=""></video>
                         </div>
                       </div>
                       <div class="event-time-wrapper">
@@ -1120,7 +1099,7 @@
           <!--------------------------- CLIENTELE SECTION --------------------------->
           <section class="clientele-section">
             <div class="section-title text-center">
-              <h3 class="subsection-header">Some Clients We've Worked With</h3>
+              <h3 class="subsection-header-lined">Some Clients We've Worked With</h3>
             </div><!-- end title -->
 
             <div class="row">
@@ -1140,42 +1119,42 @@
             </div><!-- end title -->
         
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <div class="why-us-points">
                   <figure class="why-us-icon">
                     <img src="quality-icon-orange.svg" alt="quality-icon">
                   </figure>
-                  <h2>Quality, Excellence, Safety & Comfort</h2>
+                  <h2 class="subsection-header-lined">Quality, Excellence, Safety & Comfort</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
                 </div>
               </div><!-- end col -->
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <div class="why-us-points">
                   <figure class="why-us-icon">
                     <img src="moneyvalue-icon-orange.svg" alt="money-icon">
                   </figure>
-                  <h2>More Value For Your Money</h2>
+                  <h2 class="subsection-header-lined">More Value For Your Money</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
                 </div>
               </div><!-- end col -->
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <div class="why-us-points">
                   <figure class="why-us-icon">
                     <img src="time-icon-orange.svg" alt="time-icon">
                   </figure>
-                  <h2>Timely Service Delivery</h2>
+                  <h2 class="subsection-header-lined">Timely Service Delivery</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
                 </div>
               </div><!-- end col -->
-              <div class="col-sm-6">
+              <div class="col-md-6">
                 <div class="why-us-points">
                   <figure class="why-us-icon">
                     <img src="handshake-icon-orange.svg" alt="handshake-icon">
                   </figure>
-                  <h2>Good Customer Relationship & Support</h2>
+                  <h2 class="subsection-header-lined">Good Customer Relationship & Support</h2>
                   <p>Sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
                 </div>
@@ -1396,7 +1375,7 @@
                   <li class="">
                     <i class="fa fa-envelope p-2 px-3 pt-3"></i>
                     <span class="tm-text p-2">
-                      Email: chris@increasefurniture.com.ng</span>
+                      Email: christopherasokwu@gmail.com</span>
                   </li>
                   <li class="">
                     <i class="fa fa-clock-o p-2 px-3 pt-3" style="font-size: 1.18em;"></i>
@@ -1433,7 +1412,18 @@
                   <h5 class="" style="text-align: center; text-align: center; font-size: 1.1em;
                   color: gainsboro;">Locate us on google map</h5>
                   <noscript>Google Map</noscript>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.995829127434!2d8.864684314311214!3d9.850715978290793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1053753f603cbdf5%3A0x690298f31e03545d!2sINCREASE%20FURNITURES%20AND%20ELECTRONICS!5e0!3m2!1sen!2sng!4v1601851179934!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  <div id="g-map-frame-loader-wrapper">   
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.995829127434!2d8.864684314311214!3d9.850715978290793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1053753f603cbdf5%3A0x690298f31e03545d!2sINCREASE%20FURNITURES%20AND%20ELECTRONICS!5e0!3m2!1sen!2sng!4v1601851179934!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <div id="loader" class="frame-loader">
+                      
+                    </div>
+                  </div>
+                  
+                  <!--
+                  <div class="g-map-frame-spinner">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.995829127434!2d8.864684314311214!3d9.850715978290793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1053753f603cbdf5%3A0x690298f31e03545d!2sINCREASE%20FURNITURES%20AND%20ELECTRONICS!5e0!3m2!1sen!2sng!4v1601851179934!5m2!1sen!2sng" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div> 
+                  -->
                 </div>
               </section>
             </div>
@@ -1477,7 +1467,7 @@
                         <div class="contact_info">
                             <li><i class="fa fa-map-marker"></i><span>No.5 Yakubu Gowon Way, Bandico Plaza, Zaramanganda round-about, Jos, Plateau state.</span></li>
                             <li><i i class="fa fa-phone"></i><span>+2348033514620</span></li>
-                            <li><i i class="fa fa-envelope" style="font-size: 0.9em;"></i><span>chris@increasefurniture.com.ng</span></li>
+                            <li><i i class="fa fa-envelope" style="font-size: 0.9em;"></i><span>christopherasokwu@gmail.com</span></li>
                         </div>
                     </div>
                 </div>
@@ -1863,15 +1853,13 @@
     $(function (){
 
       console.log('Hello world from within jquery');
-      let evenListItems = $('ul:even');
-      console.log(evenListItems);
 
       // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
       function hidePreloader() {
         //$('body').addClass('loaded');
         setTimeout(function() {
           $('body').addClass('loaded');
-        }, 3000);
+        }, 1500);
       }
       hidePreloader();
 
@@ -1960,7 +1948,17 @@
         //alert('page is loaded');
         console.log("Hello world from within vanilla js after page is loaded");
       });
-
+      
+      //console.log('The iframe element is ', $('iframe'));
+      //$('iframe').on('load', function(){
+        //console.log('The iframe is loaded successfully');
+      //});
+      
+      let gMapFrame, gMapFrameWrapper;
+      gMapFrame = document.querySelector('iframe');
+      gMapFrameWrapper = document.querySelector('#g-map-frame-loader-wrapper');
+      gMapFrame.addEventListener('load', ()=> gMapFrameWrapper.classList.add('frame-loaded'));
+      
       //$("document").hide().fadeIn(1500);
       
     })();

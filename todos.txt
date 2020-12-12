@@ -1,7 +1,10 @@
-- Add a loading image to the iframe section of the google map
-- RC Number    
-- Form validation and netlify form
-- Make logo image a link
+- Add a loading image to the iframe section of the google map   DONE
+- Adjust picture sizes in the project section
+- Befores and afters pictures, safety compliance practices and certifications
+- RC Number under the about section in the footer  
+- Form validation
+- netlify form
+- Make logo image a link   DONE
 - Use other fonts
 - Fill up the alt attribute for all images with descriptive 
   texts
