@@ -1,5 +1,6 @@
 - Add a loading image to the iframe section of the google map   DONE
 - Adjust picture sizes in the project section
+- let 'some clients we have worked with' be 'featured clients' instead
 - Befores and afters pictures, safety compliance practices and certifications
 - RC Number under the about section in the footer  
 - Form validation
