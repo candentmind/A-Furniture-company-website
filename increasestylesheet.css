@@ -263,7 +263,7 @@
   /************* SITE FOOTER ***************/
   .site-footer {
     background: var(--brand-color-1);
-    padding: 1.8rem 1rem 0;
+    padding: 1.2rem 1rem 0;
     color: thistle;
     color: hsl(300deg 0% 70%);
     line-height: 1.3em;
@@ -278,9 +278,9 @@
     text-align: center;
   }
   .site-footer hr{
-    flex: 100%;
-    background: grey;
     margin: 0.5em 0 0 0;
+    background: var(--brand-color-1-1);
+    background: grey;
   }
   .site-footer a{
     color: hsl(300deg 0% 70%);

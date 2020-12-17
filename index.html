@@ -18,7 +18,7 @@
   <!--====== Line Icons css ======-->
   <link rel="stylesheet" href="LineIcons.css">
 
-  <!-- fonts -->
+  <!--======  fonts ======-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
   <link rel="stylesheet" href="fonts/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -185,10 +185,20 @@
         position: absolute;
         top: 0;
         width: 25%;
-        height: 10%;
+        height: 12%;
         right: -20%;
         border-top: solid orange 2px;
         border-right: solid orange 2px;
+      }
+      
+      .about-intro::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 25%;
+        height: 60%;
+        right: -2em;
+        border-bottom: solid orange 2px;
       }
     }
     .about-stats {
@@ -219,6 +229,19 @@
     @media screen and (min-width: 992px) {
       .about-intro-pic-wrap {
         box-shadow: -10px 10px aliceblue;
+      }
+      
+      .about-intro-pic{
+        margin-top: 6em;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      .about-intro-pic-wrap {
+        box-shadow: -10px 10px aliceblue;
+      }
+      
+      .about-intro-pic{
+        margin-top: 5em;
       }
     }
     .about-intro-pic-wrap::before {
@@ -679,7 +702,6 @@
       background: var(--brand-color-1);
       color: var(--shade-1);
       padding: 1em 1em;
-      color: whitesmoke;
       font-size: 0.9em;
     }
     @media screen and (max-width: 768px){
@@ -944,7 +966,7 @@
                     <div class="col-md-4 col-sm-4 col-12">
                       <div class="about-stats">
                         <h4><span class="counter">10</span><span> + </span></h4>
-                        <p>Years of Experience</p>
+                        <p>Experience Years</p>
                       </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-12">
@@ -1205,7 +1227,7 @@
               <!----------------------------- Previous Projects --------------------------->
               <section>
                 <div class="sticky-header">
-                  <h5>A Few Completed Projects</h5>
+                  <h5>Featured Projects</h5>
                 </div>
                 <div class="gallery-grid">
                   <figure class="image-wrap">
@@ -1401,13 +1423,20 @@
                   <!-- contact form -->
                   <form action="index.html" method="POST" class="tm-contact-form">
                       <div class="form-group">
-                          <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+                          <input type="text" id="contact_name" name="contact_name" class="form-control form-control-input" required/>
+                          <label class="label-control" for="contact_name">Name</label>
                       </div>                                                                                                            
                       <div class="form-group">
-                          <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+                          <input type="email" id="contact_email" name="contact_email" class="form-control form-control-input" required/>
+                          <label class="label-control" for="contact_email">Email</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="email" id="contact_phone" name="contact_phone" class="form-control form-control-input" required/>
+                          <label class="label-control" for="contact_phone">Phone</label>
                       </div>                                                    
                       <div class="form-group">
-                          <textarea id="contact_message" name="contact_message" class="form-control" rows="4" placeholder="Your message" required></textarea>
+                          <textarea id="contact_message" name="contact_message" class="form-control form-control-textarea" rows="4" required></textarea>
+                          <label class="label-control" for="contact_message">Your message</label>
                       </div>
                       <button type="submit" class="tm-submit-btn">Send</button>                                                
                   </form> 

@@ -1,12 +1,15 @@
-- Add a loading image to the iframe section of the google map   DONE
+- implement counterStats/achievementsRecord conventionally
+- implement counterStats/achievementsRecord using data attribute 
+  and manipulating the dataset object
 - Adjust picture sizes in the project section
-- let 'some clients we have worked with' be 'featured clients' instead
 - Befores and afters pictures, safety compliance practices and certifications
 - RC Number under the about section in the footer  
 - Form validation
 - netlify form
-- Make logo image a link   DONE
 - Use other fonts
+- Still make the whatsapp and backToTop buttons smaller for
+  smaller screens
+- Copy shake animation from nedusinteriors.com for footer section
 - Fill up the alt attribute for all images with descriptive 
   texts
 - Minify scripts and stylesheets and use minified libraries
@@ -20,7 +23,6 @@
 - Reduce brightness/harshness of white color
 - Implement counter up for achievements
 - Change about us image
-- Include poster for interview video
 - Search for css creative text animation on genyt.nets
 - Include copyright and date in footer section of the page
 - Write html using well structured semantic tags
@@ -29,6 +31,8 @@
   in the source file as an SEO measure, giving priority to more
   important/very-relevant blocks first before considering others.
 - Reduce images sizes with tinypng    
+- Include poster for interview video    DONE
+- let 'some clients we have worked with' be 'featured clients' instead    DONE
 - Include page loader    DONE
 - Favicon image     DONE
 - Resize background images    DONE
@@ -41,6 +45,5 @@
 - Default whatsapp message for whatsapp button cta    DONE
 - Reorder about page so that 'clients we have worked with'
   precedes the 'why choose us' section    DONE
-- Still make the whatsapp and backToTop buttons smaller for
-  smaller screens
-- Copy shake animation from nedusinteriors.com for footer section
+- Make logo image a link   DONE
+- Add a loading image to the iframe section of the google map   DONE
