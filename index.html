@@ -39,6 +39,10 @@
       font-family: "MyDigitalFont";
       src: url("digital-7 (mono).ttf");
     }
+    
+    .hidden{
+      display: none;
+    }
 
     /********** THIS COULD SUBSTITUTE THE MAIN ORANGE/RED COLOR *************/
     /*background-color: #bf4b06;*/
@@ -748,7 +752,7 @@
       background: #2f2b93;
       width: 100%;
       height: 100%;
-      
+      transition: all 1s;
     }
     #g-map-frame-loader-wrapper.frame-loaded #loader{
       opacity: 0;
@@ -771,7 +775,7 @@
     }
 
     /* ===================================================================
-                         SCROLL TO TYPE BUTTON STYLES
+                         SCROLL TO TOP BUTTON STYLES
     ====================================================================== */
     .dmtop.show {
       bottom: 6px;
@@ -998,7 +1002,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="vision-statement">
-                  <h6 class="col-12">vision</h6>
+                  <h6 class="col-12">Vision</h6>
                   <div class="col-4">
                     <div class="vision-graphic">
                       <img src="vision-icon.svg" alt="vision-graphic">
@@ -1011,7 +1015,7 @@
               </div>
               <div class="col-lg-6">
                 <div class="mission-statement">
-                  <h6 class="col-12">mission</h6>
+                  <h6 class="col-12">Mission</h6>
                   <div class="col-4">
                     <div class="mission-graphic">
                       <img src="mission-icon.svg" alt="mission-graphic">
@@ -1067,13 +1071,15 @@
                   <h3 class="subsection-header">Brief Corporate History</h3>
                 </div>
                 <div class="tm-flex about-body timeline-bg">
-                  <h6>where we are going is built on where we have been</h6>
+                  <h6>Every firm has a timeline. We gain valuable insights and crucial experiences as we grow. 
+                    <br> Where we are going is built on where we have been.
+                  </h6>
                   <ul class="timeline">
 
                     <!-- Item 1 -->
                     <li class="timeline-item">
                       <div class="event-time-wrapper">
-                        <span class="event-time">the event time</span>
+                        <span class="event-time">2010</span>
                       </div>
                       <div class="event-content-parent">
                         <div class="flag-wrapper">
@@ -1099,14 +1105,14 @@
                         </div>
                       </div>
                       <div class="event-time-wrapper">
-                        <span class="event-time">the event time</span>
+                        <span class="event-time">2017</span>
                       </div>
                     </li>
 
                     <!-- Item 3 -->
                     <li class="timeline-item">
                       <div class="event-time-wrapper">
-                        <span class="event-time">the event time</span>
+                        <span class="event-time">Present Day</span>
                       </div>
                       <div class="event-content-parent">
                         <div class="flag-wrapper">
@@ -1242,35 +1248,35 @@
                       <i class="fa fa-search-plus"></i>
                       <img src="diningfurniture-tn_m.PNG" alt="This is image 2" class="img-fluid">
                     </a>
-                    <figcaption>This a television console</figcaption>
+                    <figcaption>This a dining furniture set</figcaption>
                   </figure>
                   <figure class="image-wrap">
                     <a href="banklongplatform.PNG" data-size="624x550">
                       <i class="fa fa-search-plus"></i>
                       <img src="banklongplatform-tn_m.PNG" alt="This is image 3" class="img-fluid">
                     </a>
-                    <figcaption>This a television console</figcaption>
+                    <figcaption>This a client platform made for UBA</figcaption>
                   </figure>
                   <figure class="image-wrap">
                     <a href="officetables.PNG" data-size="624x550">
                       <i class="fa fa-search-plus"></i>
                       <img src="officetables-tn_m.PNG" alt="" class="img-fluid">
                     </a>
-                    <figcaption>This a television console</figcaption>
+                    <figcaption>These are office tables made for UBA</figcaption>
                   </figure>
                   <figure class="image-wrap">
                     <a href="officewardrobe.PNG" data-size="624x550">
                       <i class="fa fa-search-plus"></i>
                       <img src="officewardrobe-tn_m.PNG" alt="" class="img-fluid">
                     </a>
-                    <figcaption>This a television console</figcaption>
+                    <figcaption>This an office wall cabinet with good space-economy</figcaption>
                   </figure>
                   <figure class="image-wrap">
                     <a href="kitchencabinet.PNG" data-size="624x550">
                       <i class="fa fa-search-plus"></i>
                       <img src="kitchencabinet-tn_m.PNG" alt="" class="img-fluid">
                     </a>
-                    <figcaption>This a television console</figcaption>
+                    <figcaption>This is a kitchen cabinet</figcaption>
                   </figure>
                 </div>
                 <p class="cta-text" style="text-align: center;font-family: myLobster;
@@ -1421,7 +1427,10 @@
               <section class="col-lg-6">
                 <div class="">
                   <!-- contact form -->
-                  <form action="index.html" method="POST" class="tm-contact-form">
+                  <form action="index.html" method="POST" class="tm-contact-form netlify-form" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                      <p class="hidden">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                      </p>
                       <div class="form-group">
                           <input type="text" id="contact_name" name="contact_name" class="form-control form-control-input" required/>
                           <label class="label-control" for="contact_name">Name</label>
@@ -1438,6 +1447,7 @@
                           <textarea id="contact_message" name="contact_message" class="form-control form-control-textarea" rows="4" required></textarea>
                           <label class="label-control" for="contact_message">Your message</label>
                       </div>
+                      <div data-netlify-recaptcha="true"></div>
                       <button type="submit" class="tm-submit-btn">Send</button>                                                
                   </form> 
                 </div>
