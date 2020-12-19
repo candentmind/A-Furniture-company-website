@@ -325,8 +325,9 @@ button:focus { outline: none; }
 }
 .form-control-input, .form-control-textarea {
 	border-radius: 0;
-	padding-top: 1.2em;
+	padding-top: 1.3em;
 	padding-left: 1rem;
+	padding-bottom: 0.3em;
 }
 
 .label-control {
