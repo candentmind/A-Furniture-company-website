@@ -359,7 +359,6 @@ button:focus { outline: none; }
 	padding: 10px 50px;
 	margin-top: 1.4em;
 	font-weight: 400;
-	/*font-size: 2.5rem;*/
 	display: block;
 }
 
@@ -367,7 +366,7 @@ button:focus { outline: none; }
 .tm-submit-btn:focus,
 .tm-submit-btn:active {
 	background-color: rgb(176, 138, 59);
-	transform: scale(1.2);
+	/*transform: scale(1.2);*/
 }
 
 textarea { height: 168px; }
