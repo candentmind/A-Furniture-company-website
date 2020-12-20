@@ -1427,7 +1427,7 @@
               <section class="col-lg-6">
                 <div class="">
                   <!-- contact form -->
-                  <form name="contact" method="POST" class="tm-contact-form" data-netlify="true" netlify-honeypot="bot-field">
+                  <form name="contact" method="POST" class="tm-contact-form" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
                       <p class="hidden">
                         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
                       </p>
@@ -1447,7 +1447,7 @@
                           <textarea id="contact_message" name="contact_message" class="form-control form-control-textarea" rows="4" required></textarea>
                           <label class="label-control" for="contact_message">Your message</label>
                       </div>
-                      <!--<div data-netlify-recaptcha="true"></div>-->
+                      <div data-netlify-recaptcha="true"></div>
                       <button type="submit" class="tm-submit-btn">Send</button>                                                
                   </form> 
                 </div>
