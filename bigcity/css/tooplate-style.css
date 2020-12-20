@@ -367,6 +367,7 @@ button:focus { outline: none; }
 .tm-submit-btn:focus,
 .tm-submit-btn:active {
 	background-color: rgb(176, 138, 59);
+	transform: scale(1.2);
 }
 
 textarea { height: 168px; }
