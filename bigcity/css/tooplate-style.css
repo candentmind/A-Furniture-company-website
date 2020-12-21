@@ -345,8 +345,9 @@ button:focus { outline: none; }
 .form-control-input.notEmpty + .label-control,
 .form-control-textarea:focus + .label-control,
 .form-control-textarea.notEmpty + .label-control {
-	top: 0.125rem;
-	font-size: 0.7rem;
+	top: 0.1rem;
+	font-size: 0.65rem;
+	font-weight: bold;
 }
 
 .form-group { margin-bottom: 0.8rem; position: relative;}

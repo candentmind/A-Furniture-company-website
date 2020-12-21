@@ -216,6 +216,11 @@
       font-size: 24px;
       font-weight: 400;
       margin-bottom: 5px;
+      position: relative;
+    }
+    .about-stats .counter{
+      font-weight: bold;
+      font-size: 1.2em;
     }
     .about-stats p {
       font-size: 15px;
@@ -966,23 +971,25 @@
                     We are not just another average furniture firm but a distinguished company with a hallmark of
                     excellence and a stellar catalog.
                   </p>
-                  <div class="row">
-                    <div class="col-md-4 col-sm-4 col-12">
-                      <div class="about-stats">
-                        <h4><span class="counter">10</span><span> + </span></h4>
-                        <p>Experience Years</p>
+                  <div class="stats">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-4 col-12">
+                        <div class="about-stats">
+                          <h4><span class="counter" data-speed="200" data-target=10>0</span><span> + </span></h4>
+                          <p>Experience Years</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-12">
-                      <div class="about-stats">
-                        <h4><span class="counter">150</span><span> + </span></h4>
-                        <p>Projects Executed</p>
+                      <div class="col-md-4 col-sm-4 col-12">
+                        <div class="about-stats">
+                          <h4><span class="counter" data-speed="10" data-target=150>0</span><span> + </span></h4>
+                          <p>Projects Executed</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-12">
-                      <div class="about-stats">
-                        <h4><span class="counter">260</span><span> + </span></h4>
-                        <p>Satisfied Customers</p>
+                      <div class="col-md-4 col-sm-4 col-12">
+                        <div class="about-stats">
+                          <h4><span class="counter" data-speed="6" data-target=260>0</span><span> + </span></h4>
+                          <p>Satisfied Customers</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1071,8 +1078,9 @@
                   <h3 class="subsection-header">Brief Corporate History</h3>
                 </div>
                 <div class="tm-flex about-body timeline-bg">
-                  <h6>Every firm has a timeline. We gain valuable insights and crucial experiences as we grow. 
-                    <br style="margin: 0.2em 0; display: block;"> Where we are going is built on where we have been.
+                  <h6>
+                    <span>Every firm has a timeline. We gain valuable insights and crucial experiences as we grow.</span>
+                    <span style="margin-top: 0.3em;">Where we are going is built on where we have been.</span>
                   </h6>
                   <ul class="timeline">
 
@@ -1961,13 +1969,13 @@
 
       //Scroll to top  
       let timer;
-      if ($('#scroll-to-top').length) {
+      if($('#scroll-to-top').length) {
         let scrollThreshold = 100, // px
         backToTop = function () {
           var scrollTop = $(window).scrollTop();
           if (scrollTop > scrollThreshold) {
+            //clearTimeout(timer);
             $('#scroll-to-top').addClass('show');
-            clearTimeout(timer);
             timer = setTimeout(()=>{
               $('#scroll-to-top').removeClass('show');
             }, 3000);
@@ -1986,6 +1994,48 @@
           }, 500);
         });
       }
+      
+      /* Move Form Fields Label When User Types */
+      // for input and textarea fields
+      $("input, textarea").keyup(function(){
+        if ($(this).val() != '') {
+          $(this).addClass('notEmpty');
+        } else {
+          $(this).removeClass('notEmpty');
+        }
+      });
+      
+      /***************************************************
+        Update counters with animation effect when user 
+        scrolls stats section into view
+      ****************************************************/
+      $(window).on('scroll', ()=>{
+        function updateCount(item){
+          let target = item.dataset.target;
+          let duration = +item.dataset.speed;
+          let start = +item.textContent;	
+
+          let timer = setInterval( ()=>{
+            if(start < target){
+              start++;
+              item.textContent = start;
+            }else
+              clearInterval(timer);
+          }, duration );
+        }
+
+        if( $('#about').is('.selected') ){  //If user is on the about page or section
+          if( window.innerHeight > $('.stats').offset().top ){
+            if( $('.stats').offset().top - $(window).scrollTop() <= 550 ){
+              document.querySelectorAll('.counter').forEach(updateCount);
+            } 
+          }else{
+            if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+              document.querySelectorAll('.counter').forEach(updateCount);
+            } 
+          }
+        }
+      });
       
     });
 
