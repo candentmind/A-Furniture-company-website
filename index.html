@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="fonts/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
   
   <style>
 
@@ -298,14 +299,22 @@
       display: flex;
       flex-wrap: wrap;
       color: rgb(49, 45, 45);
-      align-items: center;
+      /*align-items: center;*/
+      height: 100%;
     }
+    
     .vision-statement h6,
     .mission-statement h6{
       text-align: center;
+      color: var(--brand-color-1);
+      font-weight: bold;
+      font-family: cursive;
+      font-size: 1.15em;
     }
-    .vision-statement {
-      margin-bottom: 0.35em;
+    @media screen and (max-width: 992px){
+      .mission-statement{
+        margin-top: 0.3em;
+      }
     }
     .vision-statement::before,
     .mission-statement::after {
@@ -398,12 +407,14 @@
       text-shadow: 0.3px 0.3px aliceblue;
       margin: 0.4em;
       list-style: none;
-	  text-align: center;
+      text-align: center;
+      line-height: 1.3;
     }
     .services-main .services-list li {
       text-shadow: 1px 0px white;
       letter-spacing: 1.2px;
-	  border-bottom: 1px solid gray;
+      border-bottom: 1px solid gray;
+      margin: 0.5em 0;
     }
     .services-icon {
       position: absolute;
@@ -473,7 +484,7 @@
       color: var(--brand-color-1);
       background-color: var(--brand-color-1);
       color: var(--shade-1);
-	  border-top: orange solid;
+      border-top: orange solid;
     }
     .why-us-points h2{
       font-size: 1.1em;
@@ -788,8 +799,8 @@
     .dmtop {
       background-color: hsla(255, 100%, 58%, 0.7);
       z-index: 100;
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       line-height: 30px;
       position: fixed;
       bottom: -100px;
@@ -975,19 +986,19 @@
                     <div class="row">
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="200" data-target=10>0</span><span> + </span></h4>
+                          <h4><span class="counter" data-speed="200" data-target=10>1</span><span> + </span></h4>
                           <p>Experience Years</p>
                         </div>
                       </div>
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="10" data-target=150>0</span><span> + </span></h4>
+                          <h4><span class="counter" data-speed="10" data-target=150>1</span><span> + </span></h4>
                           <p>Projects Executed</p>
                         </div>
                       </div>
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="6" data-target=260>0</span><span> + </span></h4>
+                          <h4><span class="counter" data-speed="4" data-target=230>1</span><span> + </span></h4>
                           <p>Satisfied Customers</p>
                         </div>
                       </div>
@@ -1016,8 +1027,13 @@
                     </div>
                   </div>
                   <div class="col-8">
-                    <div>This is the vision statement</div>
+                    <p style="text-align: left;">
+                      To become the foremost suppliers and
+                      construction Delivery Company in Nigeria and
+                      indeed the world over.
+                    </p>
                   </div>
+                  <p class="filler-content col-12" style="visibility: hidden;">The blessings of the Lord.</p>
                 </div>
               </div>
               <div class="col-lg-6">
@@ -1029,7 +1045,12 @@
                     </div>
                   </div>
                   <div class="col-8">
-                    <div>This is the mission statement</div>
+                    <p style="text-align: left;">
+                      To provide superior general services
+                      and facility management solutions
+                      that will meet our clients’ needs and
+                      exceed their expectations.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1046,11 +1067,12 @@
               <div class="services-main">
                 <ul class="services-list">
                   <li>Home & Bank Furniture</li>
-                  <li>Corporate Office</li>
-                  <li>Upholstery and Reupholstery</li>
-                  <li>Hotel/Event Centres & Worship Centres</li>
+                  <li>Corporate Office Furniture</li>
+                  <li>Upholstery & Reupholstery</li>
+                  <li>Furniture for Hotel/Event Centres & Worship Centres</li>
                   <li>Interior Design & Decorations</li>
-                  <li>Quality Electronic Gadgets</li>
+                  <li>Quality Electronic Gadgets Sales</li>
+                  <li>Building & Construction</li>
                 </ul>
                 <img class="services-icon top" src="small-chair.svg" alt="">
                 <img class="services-icon bottom" src="ceiling-light.svg" alt="">
@@ -1094,7 +1116,10 @@
                           <span class="flag">Startup and Humble Beginnings</span>
                         </div>
                         <div class="desc">
-                          <p>My current employment. Way better than the position before!</p>
+                          <p>
+                            The early stages of the business. In 2013, it was registered as Increase Furniture and 
+                            Electronics company with the registration number of RC:BA3841.
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -1106,8 +1131,10 @@
                           <span class="flag">Accolades, Award and Recognition</span>
                         </div>
                         <div class="desc">
-                          <p>
-                            My first employer. All the stuff I've learned and projects I've been working on.
+                          <p style="padding: 0.5em;">
+                            With our persistency, hardwork and value-driven service delivery of quality. We were recognized and 
+                            won the prestigious Who is Who award as an impact making company in our field. A video excerpt from the award-interview 
+                            with the CEO, Mr. Christopher George can be watched below.
                           </p>
                           <video controls src="whoiswho-award-interview.mp4" alt="interview-video" poster="poster2.jpg"></video>
                         </div>
@@ -1120,7 +1147,7 @@
                     <!-- Item 3 -->
                     <li class="timeline-item">
                       <div class="event-time-wrapper">
-                        <span class="event-time">Present Day</span>
+                        <span class="event-time">2019 - Present Day</span>
                       </div>
                       <div class="event-content-parent">
                         <div class="flag-wrapper">
@@ -1128,7 +1155,10 @@
                         </div>
                         <div class="desc">
                           <p>
-                            A description of all the lectures and courses I have taken and my final degree?
+                            Re-registration of the company as Increase Furniture and Nigeria 
+                            Limited with a registration number of RC:1579240. 
+                            More partnership and synergy with various established brands 
+                            and diversification into building, construction and real estate.
                           </p>
                         </div>
                       </div>
@@ -1169,8 +1199,10 @@
                     <img src="quality-icon-orange.svg" alt="quality-icon">
                   </figure>
                   <h2 class="subsection-header-lined">Quality, Excellence, Safety & Comfort</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                  <p>
+                    Quality, quality and more quality is really what we offer and that's what has endeared us to our
+                    clients over the years. We also consider ergonomic comfortability and safety in our designs.
+                  </p>
                 </div>
               </div><!-- end col -->
               <div class="col-md-6">
@@ -1179,8 +1211,9 @@
                     <img src="moneyvalue-icon-orange.svg" alt="money-icon">
                   </figure>
                   <h2 class="subsection-header-lined">More Value For Your Money</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                  <p>
+                    Save more in the longterm by getting durable products and services with less or no worries at all for frequent maintenance and/or repairs.
+                  </p>
                 </div>
               </div><!-- end col -->
               <div class="col-md-6">
@@ -1189,8 +1222,9 @@
                     <img src="time-icon-orange.svg" alt="time-icon">
                   </figure>
                   <h2 class="subsection-header-lined">Timely Service Delivery</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                  <p>
+                    We understand that timing is very critical in projects and we are always early in delivery, avoiding delays at all cost.
+                  </p>
                 </div>
               </div><!-- end col -->
               <div class="col-md-6">
@@ -1199,8 +1233,10 @@
                     <img src="handshake-icon-orange.svg" alt="handshake-icon">
                   </figure>
                   <h2 class="subsection-header-lined">Good Customer Relationship & Support</h2>
-                  <p>Sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua.</p>
+                  <p>
+                    We love making impact, building and maintaining lasting relationships with our customers 
+                    and providing invaluable support when needed.
+                  </p>
                 </div>
               </div><!-- end col -->
             </div><!-- end row -->
@@ -1245,35 +1281,35 @@
                 </div>
                 <div class="gallery-grid">
                   <figure class="image-wrap">
-                    <a href="televisionconsole.png" data-size="624x550">
+                    <a href="televisionconsole.png" data-size="702x528">
                       <i class="fa fa-search-plus"></i>
                       <img src="televisionconsole-tn_m.PNG" alt="This is image 1" class="img-fluid">
                     </a>
                     <figcaption>This a television console</figcaption>
                   </figure>
                   <figure class="image-wrap">
-                    <a href="diningfurniture.PNG" data-size="624x550">
+                    <a href="diningfurniture.PNG" data-size="665x501">
                       <i class="fa fa-search-plus"></i>
                       <img src="diningfurniture-tn_m.PNG" alt="This is image 2" class="img-fluid">
                     </a>
                     <figcaption>This a dining furniture set</figcaption>
                   </figure>
                   <figure class="image-wrap">
-                    <a href="banklongplatform.PNG" data-size="624x550">
+                    <a href="banklongplatform.PNG" data-size="682x506">
                       <i class="fa fa-search-plus"></i>
                       <img src="banklongplatform-tn_m.PNG" alt="This is image 3" class="img-fluid">
                     </a>
                     <figcaption>This a client platform made for UBA</figcaption>
                   </figure>
                   <figure class="image-wrap">
-                    <a href="officetables.PNG" data-size="624x550">
+                    <a href="officetables.PNG" data-size="704x518">
                       <i class="fa fa-search-plus"></i>
                       <img src="officetables-tn_m.PNG" alt="" class="img-fluid">
                     </a>
                     <figcaption>These are office tables made for UBA</figcaption>
                   </figure>
                   <figure class="image-wrap">
-                    <a href="officewardrobe.PNG" data-size="624x550">
+                    <a href="officewardrobe.PNG" data-size="664x503">
                       <i class="fa fa-search-plus"></i>
                       <img src="officewardrobe-tn_m.PNG" alt="" class="img-fluid">
                     </a>
@@ -1287,9 +1323,9 @@
                     <figcaption>This is a kitchen cabinet</figcaption>
                   </figure>
                 </div>
-                <p class="cta-text" style="text-align: center;font-family: myLobster;
+                <p class="cta-text" style="text-align: center;font-family: Caveat;
                 margin-top: 0.6em;margin-bottom: 0;padding: 0 1em;word-spacing: unset;
-                letter-spacing: 0.5px;font-weight: normal;font-size: 1.1em;color: hsla(0, 0%, 96.1%, 0.85);">Do you have a furniture project you want executed
+                letter-spacing: 0.5px;font-weight: normal;font-size: 1.5em;line-height:1;color: hsla(0, 0%, 96.1%, 0.85);">Do you have a furniture project you want executed
                   professionally and in a timely fashion? </p>
                 <button class="site-nav-button"><a class="page-scroll" href="javascript:void(0)" data-index="3">Contact us today</a></button>
                 <hr>
@@ -1310,65 +1346,100 @@
                 
                 <div class="gallery-grid gallery-grid2">
                   <figure class="image-wrap mix office">
-                    <a href="gallery_img-01.jpg" data-size="1024x1024">
+                    <a href="gallery_img-01.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-01-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix office">
-                    <a href="gallery_img-02.jpg" data-size="1024x1024">
+                    <a href="gallery_img-02.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-02-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>         
                   <figure class="image-wrap mix home">
-                    <a href="gallery_img-03.jpg" data-size="1024x1024">
+                    <a href="gallery_img-03.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-03-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix home">
-                    <a href="gallery_img-04.jpg" data-size="1024x1024">
+                    <a href="gallery_img-04.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-04-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix home">
-                    <a href="gallery_img-05.jpg" data-size="1024x1024">
+                    <a href="gallery_img-05.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-05-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix home">
-                    <a href="gallery_img-06.jpg" data-size="1024x1024">
+                    <a href="gallery_img-06.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-06-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix home">
-                    <a href="gallery_img-07.jpg" data-size="1024x1024">
+                    <a href="gallery_img-07.jpg" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-07-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix decor">
-                    <a href="gallery_img-08.png" data-size="1024x1024">
+                    <a href="gallery_img-08.png" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-08-sm.png" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
                   <figure class="image-wrap mix decor">
-                    <a href="gallery_img-09.png" data-size="1024x1024">
+                    <a href="gallery_img-09.png" data-size="1000x1000">
                       <i class="fa fa-search-plus"></i>
                       <img src="gallery_img-09-sm.png" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-10.jpg" data-size="1300x863">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-10-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-11.jpg" data-size="1300x863">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-11-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-12.jpg" data-size="1300x863">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-12-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-13.jpg" data-size="1300x863">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-13-sm.jpg" alt="" class="img-fluid">
+                    </a>
+                    <figcaption>This is an office furniture</figcaption>
+                  </figure>
+                  <figure class="image-wrap mix home">
+                    <a href="gallery_img-14.jpg" data-size="1300x863">
+                      <i class="fa fa-search-plus"></i>
+                      <img src="gallery_img-14-sm.jpg" alt="" class="img-fluid">
                     </a>
                     <figcaption>This is an office furniture</figcaption>
                   </figure>
@@ -1893,25 +1964,15 @@
   
   <!--MY SCRIPTS-->
   <script>
-
-    /**
-    let menuButton = document.querySelector('.menu-button');
-    let menu = document.querySelector('.container');
-    let menuList = document.querySelector('.main-site-nav');
-    let logo = menuList.querySelector('li:nth-child(3)');
-    console.log(logo);
-    logo.style.display = 'none';
-    menuButton.addEventListener('click', ()=> {
-      menu.classList.toggle('open');
-    });
-    **/
-
+    
     //JQuery
     $(function (){
 
       console.log('Hello world from within jquery');
 
-      // Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
+      /********************************************************************************
+        Remove preloader (https://ihatetomatoes.net/create-custom-preloading-screen/)
+      ********************************************************************************/
       function hidePreloader() {
         //$('body').addClass('loaded');
         setTimeout(function() {
@@ -1920,17 +1981,19 @@
       }
       hidePreloader();
 
-      /* Display navigation list with sliding motion on 
-      hamburger button click */
+      /************************************************* 
+        Display navigation list with sliding motion on 
+        hamburger button click 
+      **************************************************/
       $(".toggle-button").click(function () {
         $(".toggle-button").toggleClass("change");
         $(".nav-list").slideToggle("slow");
       });
 
-      /* 
+      /*********************************************** 
         Controls the 'navigation state' as the user
         navigates from one page-section to another.
-      */
+      ************************************************/
       $('.page-scroll').on('click', function(e){
 
         let $clickedScroller = $(this);
@@ -1967,14 +2030,16 @@
         }
       });
 
-      //Scroll to top  
+      /*********************************
+        Scroll to top functionality 
+      *********************************/
       let timer;
       if($('#scroll-to-top').length) {
         let scrollThreshold = 100, // px
         backToTop = function () {
           var scrollTop = $(window).scrollTop();
           if (scrollTop > scrollThreshold) {
-            //clearTimeout(timer);
+            clearTimeout(timer);
             $('#scroll-to-top').addClass('show');
             timer = setTimeout(()=>{
               $('#scroll-to-top').removeClass('show');
@@ -1984,7 +2049,7 @@
           }
         };
         backToTop();
-        $(window).on('scroll', function () {
+        $(window).on('scroll', function (){
           backToTop();
         });
         $('#scroll-to-top').on('click', function (e) {
@@ -1995,7 +2060,9 @@
         });
       }
       
-      /* Move Form Fields Label When User Types */
+      /****************************************** 
+        Move Form Fields Label When User Types 
+      *******************************************/
       // for input and textarea fields
       $("input, textarea").keyup(function(){
         if ($(this).val() != '') {
@@ -2006,36 +2073,54 @@
       });
       
       /***************************************************
-        Update counters with animation effect when user 
-        scrolls stats section into view
+        Update counters with animation effect when  
+        user scrolls stats section into view
       ****************************************************/
+      function updateCount(item){
+        let target = item.dataset.target;
+        let duration = +item.dataset.speed;
+        let start = +item.textContent;	
+
+        let timer = setInterval( ()=>{
+          if(start < target){
+            start++;
+            item.textContent = start;
+          }else
+            clearInterval(timer);
+        }, duration );
+      }
       $(window).on('scroll', ()=>{
-        function updateCount(item){
-          let target = item.dataset.target;
-          let duration = +item.dataset.speed;
-          let start = +item.textContent;	
-
-          let timer = setInterval( ()=>{
-            if(start < target){
-              start++;
-              item.textContent = start;
-            }else
-              clearInterval(timer);
-          }, duration );
-        }
-
         if( $('#about').is('.selected') ){  //If user is on the about page or section
-          if( window.innerHeight > $('.stats').offset().top ){
-            if( $('.stats').offset().top - $(window).scrollTop() <= 550 ){
-              document.querySelectorAll('.counter').forEach(updateCount);
-            } 
-          }else{
-            if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-              document.querySelectorAll('.counter').forEach(updateCount);
-            } 
+          //if( window.innerHeight > $('.stats').offset().top ){
+            //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+              //document.querySelectorAll('.counter').forEach(updateCount);
+            //} 
+          //}else{
+            //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+              //document.querySelectorAll('.counter').forEach(updateCount);
+            //} 
+          //}
+          
+          if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+            document.querySelectorAll('.counter').forEach(updateCount);
           }
         }
       });
+      //if( $('#about').is('.selected') ){  //If user is on the about page or section
+        //if( window.innerHeight > $('.stats').offset().top ){
+          //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+            //document.querySelectorAll('.counter').forEach(updateCount);
+          //} 
+        //}else{
+          //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+            //document.querySelectorAll('.counter').forEach(updateCount);
+          //} 
+        //}
+        
+        //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+          //document.querySelectorAll('.counter').forEach(updateCount);
+        //}
+      //}
       
     });
 
@@ -2061,16 +2146,6 @@
       //$("document").hide().fadeIn(1500);
       
     })();
-
-    //More Vanilla Javascript
-    /*
-    let currTarget = '';
-    let navlist = document.querySelector('.nav-list ul');
-    navlist.addEventListener('click', (e)=>{
-      console.log(e.target);
-      //currTarget = e.currentTarget;
-    });
-    */
 
   </script>
   

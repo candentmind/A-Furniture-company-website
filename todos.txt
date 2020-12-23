@@ -1,11 +1,7 @@
-- implement counterStats/achievementsRecord conventionally
-- implement counterStats/achievementsRecord using data attribute 
-  and manipulating the dataset object
+- fix layout issue in vision/mission statement section for wider screen displays
 - Adjust picture sizes in the project section
-- Befores and afters pictures, safety compliance practices and certifications
-- RC Number under the about section in the footer  
+- Befores and afters pictures for projects under the category of renovation, safety compliance practices and certifications 
 - Form validation
-- netlify form
 - Use other fonts
 - Still make the whatsapp and backToTop buttons smaller for
   smaller screens
@@ -20,8 +16,6 @@
 - Intersection observer usage
 - Opening hours
 - Use @import for getting assets
-- Reduce brightness/harshness of white color
-- Implement counter up for achievements
 - Change about us image
 - Search for css creative text animation on genyt.nets
 - Include copyright and date in footer section of the page
@@ -30,7 +24,13 @@
   Also consider using the 'order' property to shift certain elements
   in the source file as an SEO measure, giving priority to more
   important/very-relevant blocks first before considering others.
-- Reduce images sizes with tinypng    
+- Reduce images sizes with tinypng   
+---------------------------------------------------------------------------------------------------------------
+- implement counterStats/achievementsRecord using data attribute 
+  and manipulating the dataset object    DID THIS (but the result of the animation wasn't really smooth)
+- netlify form    DONE
+- Reduce brightness/harshness of white color   DONE
+- implement counterStats/achievementsRecord conventionally   DONE unconventionally i think (lol)
 - Include poster for interview video    DONE
 - let 'some clients we have worked with' be 'featured clients' instead    DONE
 - Include page loader    DONE
