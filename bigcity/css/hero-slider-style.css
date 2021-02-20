@@ -97,12 +97,12 @@ Single slide style
 }
 
 .cd-hero-slider h2:not(.section h2), .cd-hero-slider p:not(.section p) {
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  line-height: 1.2;
-  margin: 0 auto 14px;
-  color: #ffffff;
-  width: 90%;
-  max-width: 400px;
+  /*! text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+  /*! line-height: 1.2; */
+  /*! margin: 0 auto 14px; */
+  /*! color: #ffffff; */
+  /*! width: 90%; */
+  /*! max-width: 400px; */
 }
 .cd-hero-slider h2 {
   font-size: 2.4rem;

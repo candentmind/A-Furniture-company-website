@@ -173,7 +173,7 @@ button:focus { outline: none; }
 	width: 100%; 
 }
 
-.cd-hero-slider p:not(.section p) { color: white; }
+.cd-hero-slider p:not(.section p) { /*! color: white; */ }
 .cd-hero-slider .tm-bg-white p,
 .cd-hero-slider .tm-bg-white h2 { color: black; }
 

@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#221e86">
   <title>Increase Furniture</title>
   <link rel="icon" href="favicon.svg">
+  
+  <!--====== CSS styles ======-->
   <link rel="stylesheet" href="bigcity/css/bootstrap.min.css">
   <link rel="stylesheet" href="bigcity/css/bootstrap-4.css">
   <link rel="stylesheet" href="bigcity/css/hero-slider-style.css">
@@ -14,11 +16,12 @@
   <link rel="stylesheet" href="increasestylesheet.css">
   <link rel="stylesheet" href="photoswipe.css">
   <link rel="stylesheet" href="default-skin/default-skin.css">
+  <link rel="stylesheet" href="animate.css">
 
   <!--====== Line Icons css ======-->
   <link rel="stylesheet" href="LineIcons.css">
 
-  <!--======  fonts ======-->
+  <!--====== fonts ======-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
   <link rel="stylesheet" href="fonts/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -799,8 +802,8 @@
     .dmtop {
       background-color: hsla(255, 100%, 58%, 0.7);
       z-index: 100;
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       line-height: 30px;
       position: fixed;
       bottom: -100px;
@@ -810,14 +813,14 @@
       cursor: pointer;
       transition: all .4s ease-in-out;
       border: whitesmoke solid 1px;
-      right: 1.4%;
+      right: 1.6%;
       display: block;
       border-radius: 40%;
     }
     .dmtop i{
       font-size: 2em;
       position: relative;
-      top: -0.03em;
+      top: -0.04em;
     }
   
 
@@ -908,7 +911,7 @@
               <div class="tm-home-container-outer">
                 <div class="tm-home-container">
                   <div class="tm-home-title-container">
-                    <h2 class="tm-text-title text-xs-center tm-home-title">Welcome to Increase Furniture Nigeria Limited
+                    <h2 class="tm-text-title text-xs-center tm-home-title animated">Welcome to Increase Furniture Nigeria Limited
                     </h2>
                   </div>
                   <div class="tm-home-description-container tm-bg-dark-blue">
@@ -986,19 +989,19 @@
                     <div class="row">
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="200" data-target=10>1</span><span> + </span></h4>
+                          <h4><span class="counter" data-duration="200" data-target=10>1</span><span> + </span></h4>
                           <p>Experience Years</p>
                         </div>
                       </div>
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="10" data-target=150>1</span><span> + </span></h4>
+                          <h4><span class="counter" data-duration="10" data-target=150>1</span><span> + </span></h4>
                           <p>Projects Executed</p>
                         </div>
                       </div>
                       <div class="col-md-4 col-sm-4 col-12">
                         <div class="about-stats">
-                          <h4><span class="counter" data-speed="4" data-target=230>1</span><span> + </span></h4>
+                          <h4><span class="counter" data-duration="6" data-target=230>1</span><span> + </span></h4>
                           <p>Satisfied Customers</p>
                         </div>
                       </div>
@@ -1519,14 +1522,14 @@
                           <label class="label-control" for="contact_email">Email</label>
                       </div>
                       <div class="form-group">
-                          <input type="text" id="contact_phone" name="contact_phone" class="form-control form-control-input" required/>
+                          <input type="tel" id="contact_phone" name="contact_phone" class="form-control form-control-input" rows="50" required/>
                           <label class="label-control" for="contact_phone">Phone</label>
                       </div>                                                    
                       <div class="form-group">
-                          <textarea id="contact_message" name="contact_message" class="form-control form-control-textarea" rows="4" required></textarea>
+                          <textarea id="contact_message" name="contact_message" class="form-control form-control-textarea" rows="5" required></textarea>
                           <label class="label-control" for="contact_message">Your message</label>
                       </div>
-                      <div data-netlify-recaptcha="true"></div>
+                      <p><div data-netlify-recaptcha="true"></div></p>
                       <p style="padding: 0.3em 0;">
                         <button type="submit" class="tm-submit-btn">Send</button>
                       </p>                                                
@@ -1614,7 +1617,7 @@
       
     </div>
     <hr>
-    <small class="col-12" id="colophon">powered by CandentDigital</small>
+    <small class="col-12 animated" id="colophon">powered by CandentDigital</small>
   </footer>
 
   <!-------------------- PhotoSwipe UI Element --------------------->
@@ -2049,9 +2052,7 @@
           }
         };
         backToTop();
-        $(window).on('scroll', function (){
-          backToTop();
-        });
+        $(window).on('scroll', backToTop);
         $('#scroll-to-top').on('click', function (e) {
           e.preventDefault();
           $('html,body').animate({
@@ -2076,9 +2077,9 @@
         Update counters with animation effect when  
         user scrolls stats section into view
       ****************************************************/
-      function updateCount(item){
+      /*function updateCount(item){
         let target = item.dataset.target;
-        let duration = +item.dataset.speed;
+        let duration = +item.dataset.duration;
         let start = +item.textContent;	
 
         let timer = setInterval( ()=>{
@@ -2088,62 +2089,75 @@
           }else
             clearInterval(timer);
         }, duration );
+      }*/
+      function updateCount(){
+        let target = +this.dataset.target;
+        let duration = +this.dataset.duration;
+        let start = +this.textContent;	
+
+        let timer = setInterval( ()=>{
+          if(start < target){
+            start++;
+            this.textContent = start;
+          }else
+            clearInterval(timer);
+        }, duration );
       }
-      $(window).on('scroll', ()=>{
+      /*$(window).on('scroll', ()=>{
         if( $('#about').is('.selected') ){  //If user is on the about page or section
-          //if( window.innerHeight > $('.stats').offset().top ){
-            //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-              //document.querySelectorAll('.counter').forEach(updateCount);
-            //} 
-          //}else{
-            //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-              //document.querySelectorAll('.counter').forEach(updateCount);
-            //} 
-          //}
-          
           if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
             document.querySelectorAll('.counter').forEach(updateCount);
           }
         }
+      });*/
+      $(window).on('scroll', ()=>{
+        if( $('#about').is('.selected') ){  //If user is on the about page or section
+          if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+            document.querySelectorAll('.counter').forEach( (item) => updateCount.call(item) );
+          }
+        }
       });
-      //if( $('#about').is('.selected') ){  //If user is on the about page or section
-        //if( window.innerHeight > $('.stats').offset().top ){
-          //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-            //document.querySelectorAll('.counter').forEach(updateCount);
-          //} 
-        //}else{
-          //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-            //document.querySelectorAll('.counter').forEach(updateCount);
-          //} 
-        //}
+      /*$(window).on('scroll', ()=>{
         
-        //if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
-          //document.querySelectorAll('.counter').forEach(updateCount);
-        //}
-      //}
-      
+        if( $('#about').is('.selected') ){  //If user is on the about page or section
+          console.log('scrolling here');
+          if( $('.stats').offset().top - $(window).scrollTop() <= 600 ){
+            console.log('threshold reached');
+            document.querySelectorAll('.counter').forEach( function(item){
+              console.log('inside forEach');
+              let start = +item.textContent;
+              console.log('start is' + start);
+              let target = item.dataset.target;
+              let duration = +item.dataset.duration;	
+
+              let timer = setInterval( ()=>{
+                console.log('within timer');
+                if(start < target){
+                  start++;
+                  item.textContent = start;
+                }else
+                clearInterval(timer);
+              }, duration );
+            } );
+          }
+        }
+        
+      });)*/
     });
+    
 
     //Vanilla Javascript
     (function (){
       console.log('Hello world from within vanilla js');
 
       window.addEventListener('load', (e)=>{
-        //alert('page is loaded');
         console.log("Hello world from within vanilla js after page is loaded");
       });
-      
-      //console.log('The iframe element is ', $('iframe'));
-      //$('iframe').on('load', function(){
-        //console.log('The iframe is loaded successfully');
-      //});
       
       let gMapFrame, gMapFrameWrapper;
       gMapFrame = document.querySelector('iframe');
       gMapFrameWrapper = document.querySelector('#g-map-frame-loader-wrapper');
       gMapFrame.addEventListener('load', ()=> gMapFrameWrapper.classList.add('frame-loaded'));
-      
-      //$("document").hide().fadeIn(1500);
       
     })();
 
